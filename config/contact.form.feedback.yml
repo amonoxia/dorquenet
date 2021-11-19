@@ -1,0 +1,14 @@
+uuid: 2ad35a5b-5ec8-4178-b6cd-43a539ed1415
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - christiahall@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

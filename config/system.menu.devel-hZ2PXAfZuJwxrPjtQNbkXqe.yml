@@ -1,0 +1,8 @@
+uuid: cbf8160f-576e-4072-b021-7ed6ce4ece1f
+langcode: en
+status: true
+dependencies: {  }
+id: devel-hZ2PXAfZuJwxrPjtQNbkXqe
+label: Resta
+description: 'Description of Resta'
+locked: false
