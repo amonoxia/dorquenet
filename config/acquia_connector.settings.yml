@@ -1,4 +1,4 @@
-subscription_name: ''
+subscription_name: 'Christia Hall (Employee Free)'
 debug: false
 cron_interval: 30
 cron_interval_override: 0
@@ -32,6 +32,8 @@ spi:
     variables: {  }
     time: 0
   cron_interval: 28800
+  env_detection_enabled: true
+  site_uuid: 027e10cc-9315-45ab-93c5-8f292d3c325a
 mapping:
   acquia_spi_send_node_user:
     - acquia_connector.settings
