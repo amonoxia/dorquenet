@@ -812,4 +812,7 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_tk7-1Na3eaNGVQk_XRot0OrsQ2wDABgFgiF-QHoNQewCdQkzIWIk99DQrgGxeXGrOeUlkDLTng/sync';
+
+$config_directories['sync'] = $app_root . '/../config/' . basename($site_path);
+$settings['config_sync_directory'] = '../config';
+$settings['config_vcs_directory'] = '../config/';
