@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '85bbc3a4dc45b65e103df169a7ad4b963dffd401',
+        'reference' => 'f703fd0eb9e3c2eadec44444ae0c08e1ece7b13b',
         'name' => 'acquia/drupal-minimal-project',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '85bbc3a4dc45b65e103df169a7ad4b963dffd401',
+            'reference' => 'f703fd0eb9e3c2eadec44444ae0c08e1ece7b13b',
             'dev_requirement' => false,
         ),
         'asm89/stack-cors' => array(
@@ -249,6 +249,15 @@
             'replaced' => array(
                 0 => '9.2.9',
             ),
+        ),
+        'drupal/bootstrap_business' => array(
+            'pretty_version' => '1.0.0-beta4',
+            'version' => '1.0.0.0-beta4',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../docroot/themes/contrib/bootstrap_business',
+            'aliases' => array(),
+            'reference' => '8.x-1.0-beta4',
+            'dev_requirement' => false,
         ),
         'drupal/breakpoint' => array(
             'dev_requirement' => false,

@@ -1388,6 +1388,74 @@
             "install-path": "../../docroot/themes/contrib/adminimal_theme"
         },
         {
+            "name": "drupal/bootstrap_business",
+            "version": "1.0.0-beta4",
+            "version_normalized": "1.0.0.0-beta4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap-business.git",
+                "reference": "8.x-1.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_business-8.x-1.0-beta4.zip",
+                "reference": "8.x-1.0-beta4",
+                "shasum": "1554b300ad6e117293c070e2572b792813f091aa"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta4",
+                    "datestamp": "1606824018",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Stavros Kounis (skounis)",
+                    "homepage": "https://www.drupal.org/u/skounis",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Soukri Kechagia (skechagia)",
+                    "homepage": "https://www.drupal.org/u/skech",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Vasilis Kechagias (vkech)",
+                    "homepage": "https://www.drupal.org/u/vkech",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Giorgos Konispoliatis (Geokon)",
+                    "homepage": "https://www.drupal.org/u/geokon",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "skounis",
+                    "homepage": "https://www.drupal.org/user/877552"
+                }
+            ],
+            "description": "A free Bootstrap 3 based Drupal theme to help you create your corporate site.",
+            "homepage": "https://www.drupal.org/project/bootstrap_business",
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap-business",
+                "issues": "https://www.drupal.org/project/issues/bootstrap_business"
+            },
+            "install-path": "../../docroot/themes/contrib/bootstrap_business"
+        },
+        {
             "name": "drupal/core",
             "version": "9.2.9",
             "version_normalized": "9.2.9.0",
