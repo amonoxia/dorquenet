@@ -1,0 +1,32 @@
+uuid: 9c9e51a1-ff49-4d24-b359-2fadcf3afd80
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.basic_pages
+  module:
+    - node
+    - views
+  theme:
+    - bootstrap_business
+id: views_block__basic_pages_block_1
+theme: bootstrap_business
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'views_block:basic_pages-block_1'
+settings:
+  id: 'views_block:basic_pages-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '4'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

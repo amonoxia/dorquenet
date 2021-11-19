@@ -1,0 +1,61 @@
+uuid: 7901a811-be4a-4c3d-939b-c555131a74a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api_solr.solr_cache.cache_document_default_7_0_0
+    - search_api_solr.solr_cache.cache_fieldvalue_default_7_0_0
+    - search_api_solr.solr_cache.cache_filter_default_7_0_0
+    - search_api_solr.solr_cache.cache_persegfilter_default_7_0_0
+    - search_api_solr.solr_cache.cache_queryresult_default_7_0_0
+    - search_api_solr.solr_field_type.text_edge_und_7_0_0
+    - search_api_solr.solr_field_type.text_edgestring_und_6_0_0
+    - search_api_solr.solr_field_type.text_en_7_0_0
+    - search_api_solr.solr_field_type.text_ngram_und_7_0_0
+    - search_api_solr.solr_field_type.text_ngramstring_und_6_0_0
+    - search_api_solr.solr_field_type.text_phonetic_en_7_0_0
+    - search_api_solr.solr_field_type.text_phonetic_und_7_0_0
+    - search_api_solr.solr_field_type.text_und_7_0_0
+    - search_api_solr.solr_request_dispatcher.request_dispatcher_httpcachingnever_default_7_0_0
+    - search_api_solr.solr_request_handler.request_handler_autocomplete_default_7_0_0
+    - search_api_solr.solr_request_handler.request_handler_extract_default_7_0_0
+    - search_api_solr.solr_request_handler.request_handler_mlt_default_7_0_0
+    - search_api_solr.solr_request_handler.request_handler_select_default_7_0_0
+    - search_api_solr.solr_request_handler.request_handler_spell_default_7_0_0
+    - search_api_solr.solr_request_handler.request_handler_suggest_default_7_0_0
+    - search_api_solr.solr_request_handler.request_handler_tvrh_default_7_0_0
+  module:
+    - acquia_search
+    - search_api_solr
+_core:
+  default_config_hash: vAg7gjLiDUAbeZyfPfKEy0oxgHeO6lxGofgdDOiqiaU
+id: acquia_search_server
+name: 'Acquia Search API Solr server'
+description: ''
+backend: search_api_solr
+backend_config:
+  connector: solr_acquia_connector
+  connector_config:
+    identifier: HLRT-188302
+    api_key: c079b9cee369bbff6eff75f3a389c5d4
+    uuid: 6ff9dcde-6aaa-46dc-8801-0cedfc829672
+    api_host: 'https://api.sr-prod02.acquia.com'
+    skip_schema_check: true
+  disabled_field_types: {  }
+  disabled_caches: {  }
+  disabled_request_handlers:
+    - request_handler_elevate_default_7_0_0
+    - request_handler_replicationmaster_default_7_0_0
+    - request_handler_replicationslave_default_7_0_0
+  disabled_request_dispatchers:
+    - request_dispatcher_httpcaching_default_7_0_0
+  rows: 10
+  index_single_documents_fallback_count: 10
+  retrieve_data: true
+  highlight_data: true
+  fallback_multiple: false
+  server_prefix: ''
+  domain: generic
+  environment: default
+  optimize: false
+  site_hash: true
