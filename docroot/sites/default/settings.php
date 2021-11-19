@@ -816,3 +816,41 @@ $databases['default']['default'] = array (
 $config_directories['sync'] = $app_root . '/../config/' . basename($site_path);
 $settings['config_sync_directory'] = '../config';
 $settings['config_vcs_directory'] = '../config/';
+
+/**
+ * Acquia Search connection override for Drupal 9 using Search API Solr and Acquia Search
+ * From: https://docs.acquia.com/acquia-search/multiple-cores/override/
+ */
+function acquia_search_override_example_20210427() {
+
+  // EDIT THIS SECTION =================
+  //
+  // Edit [index ID] values according to your available Solr cores.
+  $solr_core_mapping = [
+    // Acquia environments.
+    //'prod' => '[prod index ID]',
+    //'test' => '[test index ID]',
+    'dev' =>  'HLRT-188302.dev.eechall',
+    // Fallback Solr index to use for all other cases.
+    // Including Local or other non-acquia-hosted Drupal environment
+    'FALLBACK' => 'HLRT-188302.dev.eechall'
+  ];
+
+  // END of editable part ==============
+
+  // Choose fallback core by default.
+  $chosen_core = $solr_core_mapping['FALLBACK'];
+
+  // Try to pick a core from the list according to the current environment.
+  $ah_env = @$GLOBALS['gardens_site_settings']['env'] ?: @$_ENV['AH_SITE_ENVIRONMENT'];
+  if (!empty($ah_env) && isset($solr_core_mapping[$ah_env])) {
+    $chosen_core = $solr_core_mapping[$ah_env];
+  }
+
+  return $chosen_core;
+}
+// Override the ID of the Search core to use.
+// For acquia_search-8.x-2.x
+$config['acquia_search.settings']['default_search_core'] = acquia_search_override_example_20210427();
+// For acquia_search-8.x-3.x
+$config['acquia_search.settings']['override_search_core'] = acquia_search_override_example_20210427();
