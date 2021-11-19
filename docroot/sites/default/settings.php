@@ -813,9 +813,8 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 
-$config_directories['sync'] = $app_root . '/../config/' . basename($site_path);
-$settings['config_sync_directory'] = '../config';
-$settings['config_vcs_directory'] = '../config/';
+$settings['config_sync_directory'] = '../config/ide';
+$settings['config_vcs_directory'] = '../config/ide';
 
 /**
  * Acquia Search connection override for Drupal 9 using Search API Solr and Acquia Search
