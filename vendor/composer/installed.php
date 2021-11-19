@@ -5,18 +5,36 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '42c0c1e0e8fd3e875fa9bd683803b3fbe8ca5a8d',
+        'reference' => 'e81b70440dc558875a0e2abf817e2a70d0bde8bd',
         'name' => 'acquia/drupal-minimal-project',
         'dev' => true,
     ),
     'versions' => array(
+        'acquia/cohesion' => array(
+            'pretty_version' => '6.7.0',
+            'version' => '6.7.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/cohesion',
+            'aliases' => array(),
+            'reference' => '1a94f3923d64353cb4b12dc64d235ede7b9ee711',
+            'dev_requirement' => false,
+        ),
+        'acquia/cohesion-theme' => array(
+            'pretty_version' => '6.7.0',
+            'version' => '6.7.0.0',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../docroot/themes/contrib/cohesion-theme',
+            'aliases' => array(),
+            'reference' => '42e566575808511108f2e606ad8e0c694b6859a8',
+            'dev_requirement' => false,
+        ),
         'acquia/drupal-minimal-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '42c0c1e0e8fd3e875fa9bd683803b3fbe8ca5a8d',
+            'reference' => 'e81b70440dc558875a0e2abf817e2a70d0bde8bd',
             'dev_requirement' => false,
         ),
         'asm89/stack-cors' => array(
@@ -625,6 +643,15 @@
                 0 => '9.2.9',
             ),
         ),
+        'drupal/entity_reference_revisions' => array(
+            'pretty_version' => '1.9.0',
+            'version' => '1.9.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/entity_reference_revisions',
+            'aliases' => array(),
+            'reference' => '8.x-1.9',
+            'dev_requirement' => false,
+        ),
         'drupal/field' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -690,6 +717,15 @@
             'replaced' => array(
                 0 => '9.2.9',
             ),
+        ),
+        'drupal/imce' => array(
+            'pretty_version' => '2.4.0',
+            'version' => '2.4.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/imce',
+            'aliases' => array(),
+            'reference' => '8.x-2.4',
+            'dev_requirement' => false,
         ),
         'drupal/inline_form_errors' => array(
             'dev_requirement' => false,
@@ -942,6 +978,15 @@
             'replaced' => array(
                 0 => '9.2.9',
             ),
+        ),
+        'drupal/token' => array(
+            'pretty_version' => '1.9.0',
+            'version' => '1.9.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/token',
+            'aliases' => array(),
+            'reference' => '8.x-1.9',
+            'dev_requirement' => false,
         ),
         'drupal/toolbar' => array(
             'dev_requirement' => false,
@@ -1316,8 +1361,8 @@
         'psr/http-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0',
-                1 => '^1.0',
+                0 => '^1.0',
+                1 => '1.0',
             ),
         ),
         'psr/http-message' => array(
