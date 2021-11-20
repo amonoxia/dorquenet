@@ -8,7 +8,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.wide
+    - image.style.article_teaser
     - node.type.article
   module:
     - image
@@ -34,7 +34,7 @@ content:
     weight: 0
     region: content
     settings:
-      image_style: wide
+      image_style: article_teaser
       image_link: content
     third_party_settings: {  }
     label: hidden
@@ -46,12 +46,8 @@ content:
       link: true
     third_party_settings: {  }
     label: hidden
-  links:
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   comment: true
   langcode: true
+  links: true
   search_api_excerpt: true

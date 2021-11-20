@@ -1,10 +1,10 @@
 palette:
   bg: '#f4f7fb'
   highlight: '#454e59'
-  link: '#8866c5'
-logo: 'public://color/bootstrap_business-f8b129b2/logo.svg'
+  link: '#51387e'
+logo: 'public://color/bootstrap_business-e3292ff0/logo.svg'
 stylesheets:
-  - 'public://color/bootstrap_business-f8b129b2/colors.css'
+  - 'public://color/bootstrap_business-e3292ff0/colors.css'
 files:
-  - 'public://color/bootstrap_business-f8b129b2/logo.svg'
-  - 'public://color/bootstrap_business-f8b129b2/colors.css'
+  - 'public://color/bootstrap_business-e3292ff0/logo.svg'
+  - 'public://color/bootstrap_business-e3292ff0/colors.css'

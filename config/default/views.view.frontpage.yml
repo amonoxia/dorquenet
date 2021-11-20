@@ -212,17 +212,15 @@ display:
           entity_field: type
           plugin_id: bundle
       pager:
-        type: full
+        type: mini
         options:
-          items_per_page: 12
+          items_per_page: 5
           offset: 0
           id: 0
           total_pages: 0
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '‹ '
+            next: ' ›'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -231,7 +229,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
       query:
         type: views_query
         options:

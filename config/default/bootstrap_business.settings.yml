@@ -3,7 +3,7 @@ bootstrap_remote_type: cdn
 _core:
   default_config_hash: LRraV6G0LyMg0shQWbzFApKRHEY0fAsGi6eEG5LeU7E
 features:
-  node_user_picture: true
+  node_user_picture: false
   comment_user_picture: true
   comment_user_verification: false
   favicon: true

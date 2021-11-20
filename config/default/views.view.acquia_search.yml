@@ -461,7 +461,7 @@ display:
         description: 'Solr 7 Search'
         expanded: false
         parent: ''
-        weight: 0
+        weight: -42
         context: '0'
         menu_name: main
         enabled: true

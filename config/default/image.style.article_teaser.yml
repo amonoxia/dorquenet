@@ -1,0 +1,15 @@
+uuid: 5f3e1fc8-7129-4f70-adb7-795250969913
+langcode: en
+status: true
+dependencies: {  }
+name: article_teaser
+label: 'Article Teaser'
+effects:
+  979d6634-239b-4b2c-91d1-482ad57a8f68:
+    uuid: 979d6634-239b-4b2c-91d1-482ad57a8f68
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 800
+      anchor: center-center

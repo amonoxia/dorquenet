@@ -19,16 +19,12 @@ content:
   body:
     label: hidden
     type: text_trimmed
-    weight: 100
+    weight: 0
     region: content
     settings:
       trim_length: 150
     third_party_settings: {  }
-  links:
-    weight: 101
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true
+  links: true
   search_api_excerpt: true
