@@ -1,0 +1,61 @@
+_core_config_info:
+  type: mapping
+  mapping:
+    default_config_hash:
+      type: string
+      label: 'Default configuration hash'
+
+spambot.settings:
+  type: mapping
+  label: Settings
+  mapping:
+    langcode:
+      type: string
+    _core:
+      type: _core_config_info
+    spambot_whitelist_email:
+      type: string
+    spambot_whitelist_username:
+      type: string
+    spambot_whitelist_ip:
+      type: string
+    spambot_whitelist_email_list:
+      type: sequence
+    spambot_whitelist_username_list:
+      type: sequence
+    spambot_whitelist_ip_list:
+      type: sequence
+    spambot_user_register_protect:
+      type: boolean
+    spambot_check_blocked_accounts:
+      type: boolean
+    spambot_log_blocked_registration:
+      type: boolean
+    spambot_sfs_api_key:
+      type: string
+    spambot_blocked_message:
+      type: boolean
+    spambot_cron_user_limit:
+      type: integer
+    spambot_spam_account_action:
+      type: integer
+    spambot_criteria_email:
+      type: integer
+    spambot_criteria_username:
+      type: integer
+    spambot_criteria_ip:
+      type: integer
+    spambot_blacklisted_delay:
+      type: integer
+    spambot_blocked_message_email:
+      type: string
+    spambot_blocked_message_username:
+      type: string
+    spambot_blocked_message_ip:
+      type: string
+    spambot_enable_cache:
+      type: integer
+    spambot_cache_expire:
+      type: integer
+    spambot_cache_expire_false:
+      type: integer

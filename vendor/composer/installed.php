@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e81b70440dc558875a0e2abf817e2a70d0bde8bd',
+        'reference' => '13f26de7125b25d79b0ea81dcead707bccc49105',
         'name' => 'acquia/drupal-minimal-project',
         'dev' => true,
     ),
@@ -34,7 +34,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e81b70440dc558875a0e2abf817e2a70d0bde8bd',
+            'reference' => '13f26de7125b25d79b0ea81dcead707bccc49105',
             'dev_requirement' => false,
         ),
         'asm89/stack-cors' => array(
@@ -930,6 +930,15 @@
             'replaced' => array(
                 0 => '9.2.9',
             ),
+        ),
+        'drupal/spambot' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/spambot',
+            'aliases' => array(),
+            'reference' => '8.x-1.2',
+            'dev_requirement' => false,
         ),
         'drupal/standard' => array(
             'dev_requirement' => false,

@@ -3087,6 +3087,65 @@
             "install-path": "../../docroot/modules/contrib/search_api_solr"
         },
         {
+            "name": "drupal/spambot",
+            "version": "1.2.0",
+            "version_normalized": "1.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/spambot.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/spambot-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "72ebb5ecaa352bc17e8ab3f667339e51358e6286"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1630907870",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bengtan",
+                    "homepage": "https://www.drupal.org/user/132729"
+                },
+                {
+                    "name": "kala4ek",
+                    "homepage": "https://www.drupal.org/user/1945174"
+                },
+                {
+                    "name": "me-taras",
+                    "homepage": "https://www.drupal.org/user/2526320"
+                },
+                {
+                    "name": "miiimooo",
+                    "homepage": "https://www.drupal.org/user/62954"
+                }
+            ],
+            "description": "Anti-spam module that uses data from www.stopforumspam.com to protect the user registration form against known spammers and spambots.",
+            "homepage": "https://www.drupal.org/project/spambot",
+            "support": {
+                "source": "https://git.drupalcode.org/project/spambot"
+            },
+            "install-path": "../../docroot/modules/contrib/spambot"
+        },
+        {
             "name": "drupal/token",
             "version": "1.9.0",
             "version_normalized": "1.9.0.0",

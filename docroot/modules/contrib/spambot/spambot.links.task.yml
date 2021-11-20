@@ -1,0 +1,4 @@
+spambot.user_spam:
+  route_name: spambot.user_spam
+  title: Spam
+  base_route: entity.user.canonical
