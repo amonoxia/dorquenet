@@ -857,3 +857,8 @@ function acquia_search_override_example_20210427() {
 $config['acquia_search.settings']['default_search_core'] = acquia_search_override_example_20210427();
 // For acquia_search-8.x-3.x
 $config['acquia_search.settings']['override_search_core'] = acquia_search_override_example_20210427();
+
+$settings['trusted_host_patterns'] = [
+  '^eechalldev\.prod\.acquia-sites\.com$',
+  '^eefac636-fd9d-4d0e-a992-79481190ad98\.web\.ahdev\.cloud$',
+];
