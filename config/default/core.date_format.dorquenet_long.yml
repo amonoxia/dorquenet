@@ -1,0 +1,8 @@
+uuid: 83cad13b-b3aa-45b8-a7ba-083f359cd259
+langcode: en
+status: true
+dependencies: {  }
+id: dorquenet_long
+label: dorquenet_long
+locked: false
+pattern: 'l, F n, Y - g:i a'

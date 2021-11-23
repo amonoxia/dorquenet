@@ -87,7 +87,7 @@
 
   <div class="comment__meta">
 <div class=user_pic>{{ user_picture }}</div>
-    <span>{% trans %}By&nbsp;{% endtrans %}{{ author }}{% trans %} on {% endtrans %} {{ created }}</span>
+    <span>{% trans %}By&nbsp;{% endtrans %}{{ author }}{% trans %} {% endtrans %} {{ created }} ago</span>
     {% if parent %}
       <p class="visually-hidden">{{ parent }}</p>
     {% endif %}
