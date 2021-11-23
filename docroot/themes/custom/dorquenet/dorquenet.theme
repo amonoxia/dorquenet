@@ -20,4 +20,3 @@ $date = $variables['comment']->getCreatedTime();
 $variables['created'] = \Drupal::service('date.formatter')->formatInterval(REQUEST_TIME - $date);
 $variables['submitted'] = t('@username commented !datetime', array('@username' => $variables['author'], '!datetime' => '<span class="comments-ago">' . $variables['created'] . ' ago </span>'));
 }
-
