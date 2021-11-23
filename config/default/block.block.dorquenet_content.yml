@@ -1,0 +1,22 @@
+uuid: 9ee02858-9f3e-4779-8ee6-65974ff92952
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dorquenet
+_core:
+  default_config_hash: Fuvo_V2eVvIP87aTfCPvxZp6d5ggdIwcWaPSVVRKsa8
+id: dorquenet_content
+theme: dorquenet
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

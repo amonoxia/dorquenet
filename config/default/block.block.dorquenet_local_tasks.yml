@@ -1,0 +1,22 @@
+uuid: 36cf66e3-3d2d-45e0-a590-21ba9f0e4491
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dorquenet
+_core:
+  default_config_hash: nn1Lk6mCvPylf1Me1COvig7AfIgavwQ101ON6ojvfkA
+id: dorquenet_local_tasks
+theme: dorquenet
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

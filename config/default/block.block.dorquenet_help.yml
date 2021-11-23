@@ -1,0 +1,22 @@
+uuid: eb1dbf08-f5cf-4635-95a0-9711ec602b03
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - dorquenet
+_core:
+  default_config_hash: J0mu4I9vKBvBEsx1fY5zmoxN0tSVDlGOftdzwrn092k
+id: dorquenet_help
+theme: dorquenet
+region: content
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

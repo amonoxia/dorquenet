@@ -1,0 +1,20 @@
+uuid: bb9dbbcd-4cbc-4707-88af-d8e82c15b5e6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dorquenet
+_core:
+  default_config_hash: a_ewKQxu8obIPnNMIOBV6iFGLMm334WARDJJb3Hlv6w
+id: dorquenet_page_title
+theme: dorquenet
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

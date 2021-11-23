@@ -1,0 +1,22 @@
+uuid: 8231f20f-553c-4879-bc3a-06d9f5c6a50b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dorquenet
+_core:
+  default_config_hash: CybDyQJYsoDmybEofydWzBFuy_w-SZ2YjEE-Llw2jMo
+id: dorquenet_messages
+theme: dorquenet
+region: content
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

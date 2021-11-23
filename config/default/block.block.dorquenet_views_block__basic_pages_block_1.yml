@@ -1,0 +1,32 @@
+uuid: 9c0ca4dd-5b9c-46db-a6d6-a5f2c47185f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.basic_pages
+  module:
+    - node
+    - views
+  theme:
+    - dorquenet
+id: dorquenet_views_block__basic_pages_block_1
+theme: dorquenet
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'views_block:basic_pages-block_1'
+settings:
+  id: 'views_block:basic_pages-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '4'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
