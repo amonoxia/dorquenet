@@ -1,0 +1,25 @@
+uuid: 23556d99-c925-4446-8bc5-51e7fe357331
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:336a6271-2590-497e-aa6f-2a08907afd64'
+  module:
+    - block_content
+  theme:
+    - dorquenet
+id: canvas
+theme: dorquenet
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:336a6271-2590-497e-aa6f-2a08907afd64'
+settings:
+  id: 'block_content:336a6271-2590-497e-aa6f-2a08907afd64'
+  label: Canvas
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

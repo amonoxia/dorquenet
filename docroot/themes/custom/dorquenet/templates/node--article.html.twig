@@ -90,7 +90,6 @@
       {% endif %}
     </header>
     <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-          <canvas id="canvas"></canvas>
       {% block content %}
         {{ content|without('links') }}
       {% endblock %}
