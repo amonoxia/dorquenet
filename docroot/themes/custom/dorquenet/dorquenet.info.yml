@@ -6,8 +6,9 @@ core_version_requirement: ^8 || ^9
 # Defines the base theme
 base theme: bootstrap_business
 # Defines libraries group in which we can add css/js.
-# libraries:
- # - fluffiness/global-styling
+libraries:
+ - dorquenet/global-scripts
+ - dorquenet/global-styling
 # Regions
 regions:
     pre_header_first: 'Pre Header First'

@@ -1,6 +1,6 @@
- global-styling:
-  css:
-    component:
-      css/style.css: {}
+global-scripts:
   js:
-      js/dotsplash.js: {}
+     js/dotsplash.js: {}
+global-styles:
+  css:
+    css/dotsplash.css: {}
