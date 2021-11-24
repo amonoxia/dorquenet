@@ -10,7 +10,7 @@ _core:
   default_config_hash: VNXt_FUOrgtRAcsXGFJLNkGtGVxnh_MUYBT5j4Vi7Vc
 id: dorquenet_breadcrumbs
 theme: dorquenet
-region: promoted
+region: bottom_content
 weight: -6
 provider: null
 plugin: system_breadcrumb_block
