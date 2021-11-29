@@ -1,7 +1,7 @@
 // Oil Painting
 // Ported from flash project - http://wonderfl.net/c/92Ul
-//
-//
+// At https://codepen.io/tholman/pen/ifDak
+// By Tim Holman
 function OilPainting() {
 
   var canvas;
