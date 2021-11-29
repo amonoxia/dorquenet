@@ -6,36 +6,68 @@ body {
     padding: 0 0 5px 0;
 }
 
-.node {
+button, .node, img, ul.tabs,
+.views-row,
+#block-dorquenet-page-title,
+.block-page-title-block,
+.block-local-tasks-block,
+#block-dorquenet-footer-menu {
+z-index: 10;
+}
+
+button, .node,
+#block-dorquenet-page-title,
+#block-dorquenet-footer-menu,
+.block-local-tasks-block,
+.node--view-mode-teaser, .path-node #content-wrapper {
+  opacity: 85%;
+}
+
+.node,
+.node--view-mode-teaser, .path-node #content-wrapper {
   border-radius: 15px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
   border: thin grey solid;
   padding: 30px;
-  z-index: 10;
-  opacity: 85%;
   background-color: #FFF;
 }
+
+#block-dorquenet-page-title {
+    background-color: #f4f7fb;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
 
 .node header {
   margin: 0px;
 }
 
-img {
+img, a, button, .field--type-image {
   border-radius: 15px;
   border-top-left-radius: 300px;
   border-bottom-right-radius: 300px;
-  border: thin grey solid;
+}
+
+img {
+    border: thin grey solid;
+}
+
+.field--type-image {
+  float:left;
+  margin-right: 25px;
+  margin-bottom: 15px;
 }
 
 #main-navigation {
   opacity: 90%;
 }
 
-node--view-mode-teaser, .path-node #content-wrapper {
+.path-node #content-wrapper {
     background-color: #f4f7fb;
     border: 0px;
-    margin-bottom: 20px;
-    opacity: 85%;
-    z-index: 10;
 }
+
