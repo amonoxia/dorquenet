@@ -1,9 +1,24 @@
+body {
+  line-height: 200%;
+}
+
+.block {
+    padding: 0 0 5px 0;
+}
+
 .node {
   border-radius: 15px;
-  border-top-right-radius: 300px;
-  border-bottom-left-radius: 300px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
   border: thin grey solid;
-  padding: 100px;
+  padding: 30px;
+  z-index: 10;
+  opacity: 85%;
+  background-color: #FFF;
+}
+
+.node header {
+  0px;
 }
 
 img {
@@ -17,3 +32,10 @@ img {
   opacity: 90%;
 }
 
+node--view-mode-teaser, .path-node #content-wrapper {
+    background-color: #f4f7fb;
+    border: 0px;
+    margin-bottom: 20px;
+    opacity: 85%;
+    z-index: 10;
+}

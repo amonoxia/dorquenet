@@ -15,8 +15,10 @@ settings:
         -
           name: Formatting
           items:
+            - Styles
             - Bold
             - Italic
+            - Format
         -
           name: Links
           items:
@@ -36,6 +38,7 @@ settings:
           name: Tools
           items:
             - Source
+            - Maximize
   plugins:
     language:
       language_list: un
