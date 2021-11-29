@@ -8,7 +8,7 @@ base theme: bootstrap_business
 # Defines libraries group in which we can add css/js.
 libraries:
  - dorquenet/global-scripts
- - dorquenet/global-styling
+ - dorquenet/global-styles
 # Regions
 regions:
     pre_header_first: 'Pre Header First'

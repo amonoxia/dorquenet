@@ -1,6 +1,8 @@
 global-scripts:
   js:
-     js/dotsplash.js: {}
+    js/dotsplash.js: {}
 global-styles:
   css:
-    css/dotsplash.css: {}
+    theme:
+      css/dotsplash.css: {}
+      css/dorquenet.css: {}

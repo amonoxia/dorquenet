@@ -1,0 +1,19 @@
+.node {
+  border-radius: 15px;
+  border-top-right-radius: 300px;
+  border-bottom-left-radius: 300px;
+  border: thin grey solid;
+  padding: 100px;
+}
+
+img {
+  border-radius: 15px;
+  border-top-left-radius: 300px;
+  border-bottom-right-radius: 300px;
+  border: thin grey solid;
+}
+
+#main-navigation {
+  opacity: 90%;
+}
+
