@@ -6,3 +6,4 @@ global-styles:
     theme:
       css/dorquenet.css: {}
       css/dotsplash.css: {}
+
