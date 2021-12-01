@@ -29,7 +29,7 @@ body {
   margin: 0px;
 }
 
-img, a, button, .field--type-image,
+img, a, button, .button, .field--type-image,
 .menu-item, ul.menu li {
   border-radius: 15px;
   border-top-left-radius: 300px;
@@ -54,4 +54,8 @@ img {
 #subfooter ul.menu li,
 ul.menu li {
   background-color: #FFFFFF;
+}
+
+select {
+  color: #333333;
 }
