@@ -6,8 +6,7 @@ body {
     padding: 0 0 5px 0;
 }
 
-.node,
-.node--view-mode-teaser, .path-node #content-wrapper {
+.node--view-mode-teaser, .path-node #content-wrapper, .col-md-8 {
   border-radius: 15px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
@@ -16,21 +15,12 @@ body {
   background-color: #FFF;
 }
 
-#block-dorquenet-page-title {
-    background-color: #f4f7fb;
-    border-radius: 15px;
-    padding-left: 15px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-}
-
-
 .node header {
   margin: 0px;
 }
 
 img, a, button, .button, .field--type-image,
-.menu-item, ul.menu li {
+.menu-item, ul.menu li, ul.tabs li {
   border-radius: 15px;
   border-top-left-radius: 300px;
   border-bottom-right-radius: 300px;
@@ -47,11 +37,14 @@ img {
 }
 
 .path-node #content-wrapper {
-    background-color: #f4f7fb;
     border: 0px;
 }
 
 #subfooter ul.menu li,
 ul.menu li {
   background-color: #FFFFFF;
+}
+
+.block-system-main-block .node {
+  background-color: #f4f7fb;
 }

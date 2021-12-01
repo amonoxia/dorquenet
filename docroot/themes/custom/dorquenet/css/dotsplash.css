@@ -23,7 +23,8 @@ button, img, input, label,
 .block-system-menu-block,
 .block-system-breadcrumb-block .content,
 .node--type-page,
-.block-system-main-block .node {
+.block-system-main-block .node,
+ul.tabs li, .col-md-8 {
 z-index: 100;
 position:relative;
 }
@@ -31,12 +32,13 @@ position:relative;
 button, .node, input,
 .block-local-tasks-block,
 .node--view-mode-teaser, .path-node #content-wrapper,
-.block-system-breadcrumb-block .content {
+.block-system-breadcrumb-block .content,
+ul.tabs li {
   opacity: 85%;
 }
 
 #main-navigation,
 #block-dorquenet-page-title,
-.menu-item, ul.menu {
+.menu-item, ul.menu, #main-content .col-md-8 {
   opacity: 90%;
 }
