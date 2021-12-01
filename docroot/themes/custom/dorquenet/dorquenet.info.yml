@@ -7,7 +7,7 @@ core_version_requirement: ^8 || ^9
 base theme: bootstrap_business
 # Defines libraries group in which we can add css/js.
 libraries:
-# - dorquenet/global-scripts
+ - dorquenet/global-scripts
  - dorquenet/global-styles
 # Regions
 regions:
