@@ -6,23 +6,6 @@ body {
     padding: 0 0 5px 0;
 }
 
-button, .node, img, ul.tabs,
-.views-row,
-#block-dorquenet-page-title,
-.block-page-title-block,
-.block-local-tasks-block,
-#block-dorquenet-footer-menu {
-z-index: 10;
-}
-
-button, .node,
-#block-dorquenet-page-title,
-#block-dorquenet-footer-menu,
-.block-local-tasks-block,
-.node--view-mode-teaser, .path-node #content-wrapper {
-  opacity: 85%;
-}
-
 .node,
 .node--view-mode-teaser, .path-node #content-wrapper {
   border-radius: 15px;
