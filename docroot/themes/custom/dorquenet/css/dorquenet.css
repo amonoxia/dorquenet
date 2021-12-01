@@ -6,23 +6,6 @@ body {
     padding: 0 0 5px 0;
 }
 
-button, .node, img, ul.tabs,
-.views-row,
-#block-dorquenet-page-title,
-.block-page-title-block,
-.block-local-tasks-block,
-#block-dorquenet-footer-menu {
-z-index: 10;
-}
-
-button, .node,
-#block-dorquenet-page-title,
-#block-dorquenet-footer-menu,
-.block-local-tasks-block,
-.node--view-mode-teaser, .path-node #content-wrapper {
-  opacity: 85%;
-}
-
 .node,
 .node--view-mode-teaser, .path-node #content-wrapper {
   border-radius: 15px;
@@ -46,7 +29,8 @@ button, .node,
   margin: 0px;
 }
 
-img, a, button, .field--type-image {
+img, a, button, .field--type-image,
+.menu-item, ul.menu li {
   border-radius: 15px;
   border-top-left-radius: 300px;
   border-bottom-right-radius: 300px;
@@ -62,12 +46,12 @@ img {
   margin-bottom: 15px;
 }
 
-#main-navigation {
-  opacity: 90%;
-}
-
 .path-node #content-wrapper {
     background-color: #f4f7fb;
     border: 0px;
 }
 
+#subfooter ul.menu li,
+ul.menu li {
+  background-color: #FFFFFF;
+}

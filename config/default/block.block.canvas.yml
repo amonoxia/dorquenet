@@ -6,7 +6,6 @@ dependencies:
     - 'block_content:basic:336a6271-2590-497e-aa6f-2a08907afd64'
   module:
     - block_content
-    - system
   theme:
     - dorquenet
 id: canvas
@@ -23,8 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
+visibility: {  }
