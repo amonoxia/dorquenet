@@ -14,6 +14,7 @@ a {
   font-weight: bold;
 }
 
+<<<<<<< HEAD
 a:hover {
   border-bottom: thick #333333 dotted;
   text-decoration: none;
@@ -23,10 +24,31 @@ a:hover {
     padding: 0 0 5px 0;
 }
 
+=======
+.node--view-mode-teaser, .path-node #content-wrapper, .col-md-8 {
+  border-radius: 15px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border: thin grey solid;
+  padding: 30px;
+  background-color: #FFF;
+}
+
+>>>>>>> 93239fc95966adb0d9a93578ec1fd800aef26442
 .node header {
   margin: 0px;
 }
 
+<<<<<<< HEAD
+=======
+img, a, button, .button, .field--type-image,
+.menu-item, ul.menu li, ul.tabs li {
+  border-radius: 15px;
+  border-top-left-radius: 300px;
+  border-bottom-right-radius: 300px;
+}
+
+>>>>>>> 93239fc95966adb0d9a93578ec1fd800aef26442
 img {
     border: thin grey solid;
 }
@@ -74,6 +96,7 @@ ul.links.field__items li {
   background-color: #FFFFFF;
 }
 
+<<<<<<< HEAD
 /* Reverse leaf shape for smaller objects */
 
 img, a, button, .button, .field--type-image,
@@ -81,4 +104,8 @@ img, a, button, .button, .field--type-image,
   border-radius: 15px;
   border-top-left-radius: 300px;
   border-bottom-right-radius: 300px;
+=======
+.block-system-main-block .node {
+  background-color: #f4f7fb;
+>>>>>>> 93239fc95966adb0d9a93578ec1fd800aef26442
 }
