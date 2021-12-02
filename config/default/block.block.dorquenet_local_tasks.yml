@@ -9,7 +9,7 @@ _core:
 id: dorquenet_local_tasks
 theme: dorquenet
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

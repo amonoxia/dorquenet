@@ -50,7 +50,7 @@ position:relative;
 button, img, input, label,
 .node, ul.tabs, ul.menu, .button,
 .menu-item, ul.tabs li,
-.col-md-8,
+.col-md-8, .block,
 .block-system-breadcrumb-block,
 .node--view-mode-teaser, .path-node #content-wrapper {
 z-index: 100;
