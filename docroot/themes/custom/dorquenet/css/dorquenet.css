@@ -19,6 +19,10 @@ a:hover {
   text-decoration: none;
 }
 
+.label {
+  color: #51387e;
+}
+
 div.view-header {
   margin-bottom: 25px;
   font-size: 18px;
@@ -34,11 +38,9 @@ div.view-header {
   margin: 0px;
 }
 
-img, button, .button, .field--type-image,
-.menu-item, ul.menu li, ul.tabs li {
-  border-radius: 15px;
-  border-top-left-radius: 300px;
-  border-bottom-right-radius: 300px;
+div.meta.submitted {
+  color: #51387e;
+  font-size: 16px;
 }
 
 img {
@@ -56,6 +58,23 @@ ul.menu li {
   background-color: #FFFFFF;
 }
 
+ul.tabs li a:hover {
+  background-color: #FFFFFF;
+  border:0px;
+}
+
+.node--view-mode-teaser,
+.path-node #content-wrapper
+ {
+  border: thin grey solid;
+  padding: 30px;
+  background-color: #FFFFFF;
+}
+
+.comment {
+  border: thin grey solid;
+}
+
 /* User menu items */
 ul.menu li {
   border: 0px;
@@ -71,34 +90,27 @@ ul.links.field__items li {
   list-style: circle;
 }
 
+/* comment links */
+
+article nav {
+float:right;
+}
+
 /* Leaf shape for content containers */
 
-.node--view-mode-teaser, .path-node #content-wrapper
- {
+.node--view-mode-teaser, .path-node #content-wrapper,
+.comment
+{
   border-radius: 15px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
 }
 
-.node--view-mode-teaser,
-.path-node #content-wrapper
- {
-  border: thin grey solid;
-  padding: 30px;
-  background-color: #FFFFFF;
-}
-
 /* Reverse leaf shape for smaller objects */
 
 img, button, .button, .field--type-image,
-.menu-item, ul.menu li, ul.tabs li {
+.menu-item, ul.menu li, ul.tabs li, input.button {
   border-radius: 15px;
   border-top-left-radius: 300px;
   border-bottom-right-radius: 300px;
 }
-
-/* was this a hack for something?
-.block-system-main-block .node {
-  background-color: #f4f7fb;
-}
-*/
