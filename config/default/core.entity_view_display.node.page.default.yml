@@ -5,9 +5,12 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_attachment
+    - field.field.node.page.field_image
+    - image.style.article_teaser
     - node.type.page
   module:
     - file
+    - image
     - text
     - user
 _core:
@@ -25,15 +28,24 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_attachment:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content
-  links:
+  field_image:
     weight: 1
+    label: hidden
+    settings:
+      image_style: article_teaser
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
