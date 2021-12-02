@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_attachment
     - node.type.page
   module:
     - text
@@ -25,6 +26,7 @@ content:
       trim_length: 150
     third_party_settings: {  }
 hidden:
+  field_attachment: true
   langcode: true
   links: true
   search_api_excerpt: true

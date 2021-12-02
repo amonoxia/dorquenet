@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_attachment
     - node.type.page
   module:
+    - file
     - text
     - user
 _core:
@@ -22,6 +24,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_attachment:
+    weight: 2
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
   links:
     weight: 1
     region: content
