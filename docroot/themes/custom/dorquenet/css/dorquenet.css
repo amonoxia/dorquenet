@@ -34,7 +34,7 @@ div.view-header {
   margin: 0px;
 }
 
-img, a, button, .button, .field--type-image,
+img, button, .button, .field--type-image,
 .menu-item, ul.menu li, ul.tabs li {
   border-radius: 15px;
   border-top-left-radius: 300px;
@@ -97,6 +97,8 @@ img, button, .button, .field--type-image,
   border-bottom-right-radius: 300px;
 }
 
+/* was this a hack for something?
 .block-system-main-block .node {
   background-color: #f4f7fb;
 }
+*/
