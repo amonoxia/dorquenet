@@ -34,6 +34,13 @@ div.view-header {
   margin: 0px;
 }
 
+img, a, button, .button, .field--type-image,
+.menu-item, ul.menu li, ul.tabs li {
+  border-radius: 15px;
+  border-top-left-radius: 300px;
+  border-bottom-right-radius: 300px;
+}
+
 img {
     border: thin grey solid;
 }
@@ -88,4 +95,8 @@ img, button, .button, .field--type-image,
   border-radius: 15px;
   border-top-left-radius: 300px;
   border-bottom-right-radius: 300px;
+}
+
+.block-system-main-block .node {
+  background-color: #f4f7fb;
 }
