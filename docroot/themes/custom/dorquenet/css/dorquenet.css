@@ -19,6 +19,13 @@ a:hover {
   text-decoration: none;
 }
 
+div.view-header {
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-style: italic;
+}
+
 .block {
     padding: 0 0 5px 0;
 }
@@ -76,7 +83,7 @@ ul.links.field__items li {
 
 /* Reverse leaf shape for smaller objects */
 
-img, a, button, .button, .field--type-image,
+img, button, .button, .field--type-image,
 .menu-item, ul.menu li, ul.tabs li {
   border-radius: 15px;
   border-top-left-radius: 300px;
