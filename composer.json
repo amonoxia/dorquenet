@@ -20,6 +20,7 @@
         "drupal/bootstrap_business": "^1.0@beta",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-recommended": "^9",
+        "drupal/redirect": "^1.6",
         "drupal/spambot": "^1.2",
         "drush/drush": "^10.6"
     },

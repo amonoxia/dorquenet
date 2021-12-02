@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '13f26de7125b25d79b0ea81dcead707bccc49105',
+        'reference' => '91d404dd24ca97c60a49ed1afdb46fbd060f1631',
         'name' => 'acquia/drupal-minimal-project',
         'dev' => true,
     ),
@@ -34,7 +34,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '13f26de7125b25d79b0ea81dcead707bccc49105',
+            'reference' => '91d404dd24ca97c60a49ed1afdb46fbd060f1631',
             'dev_requirement' => false,
         ),
         'asm89/stack-cors' => array(
@@ -870,6 +870,15 @@
             'replaced' => array(
                 0 => '9.2.9',
             ),
+        ),
+        'drupal/redirect' => array(
+            'pretty_version' => '1.6.0',
+            'version' => '1.6.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/redirect',
+            'aliases' => array(),
+            'reference' => '8.x-1.6',
+            'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
             'dev_requirement' => false,
