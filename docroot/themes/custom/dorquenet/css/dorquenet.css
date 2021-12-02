@@ -36,6 +36,10 @@ p.small {
   color: #51387e;
 }
 
+h2.title {
+  margin: 0px;
+}
+
 div.view-header {
   margin-bottom: 25px;
   font-size: 18px;
@@ -80,12 +84,16 @@ ul.tabs li a:hover {
 .path-node #content-wrapper
  {
   border: thin grey solid;
-  padding: 30px;
+  padding: 15px;
   background-color: #FFFFFF;
 }
 
 .comment {
   border: thin grey solid;
+}
+
+.field--type-text-with-summary {
+  text-align: justify;
 }
 
 /* User menu items */
@@ -101,6 +109,11 @@ ul.menu li {
 /* tag links */
 ul.links.field__items li {
   list-style: circle;
+}
+
+.field--name-field-tags {
+  direction:rtl;
+  text-align:right;
 }
 
 /* comment links */
