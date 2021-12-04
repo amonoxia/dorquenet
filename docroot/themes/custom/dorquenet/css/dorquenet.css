@@ -1,74 +1,70 @@
-/* Style guide:
+/* STYLE GUIDE AND NOTES
+Style guide:
 Purple: #51387e
-Light Grey:
-Grey: #333333;
+Silver: #666666
+Charcoal: #333333;
 Dark Grey: #180527;
 White: #FFFFFF
+Off-White/super light grey: #f4f7fb
+
+And now we're the colorad rockies I guess.
 */
 
-/* FONTS and Markup */
+/* FONTS AND MARKUP */
 
 /* Google font import */
 @import url('https://fonts.googleapis.com/css2?family=Comforter&family=Gwendolyn&family=Montserrat:wght@300&family=Nunito:wght@300;400&family=Playfair+Display&display=swap');
 
+/* Fonts, weight and style */
 body {
   line-height: 200%;
   font-family: nunito, sans-serif;
 }
 
 a {
-  color: #51387e;
   text-decoration: none;
   font-weight: bold;
 }
 
 a:hover {
-  border-bottom: thick #333333 dotted;
   text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#333333;
   font-family: Playfair Display, serif;
 }
 
+div.meta.submitted {
+  font-size: 16px;
+}
+
+/* text colors */
+
+/* purple text */
+a, .label,
+div.meta.submitted {
+  color: #51387e;
+}
+
+/* charcoal text */
+
+h1, h2, h3, h4, h5 {
+  color:#333333;
+}
+
+/* silver text */
 h6 {
   color: #666666;
 }
 
-.label, a {
-  color: #51387e;
-}
+/* Spacing and Alignment */
 
 h2.title {
   margin: 0px;
 }
 
-div.view-header {
-  margin-bottom: 25px;
-  line-height: 1.2;
-  font-family: Gwendolyn;
-  font-size: 38px;
-  color: #51387e;
-}
-
-/* Spacing */
-
 .block {
     padding: 0 0 5px 0;
-}
-
-.node header {
-  margin: 0px;
-}
-
-div.meta.submitted {
-  color: #51387e;
-  font-size: 16px;
-}
-
-img {
-    border: thin grey solid;
 }
 
 .field--type-image {
@@ -77,30 +73,60 @@ img {
   margin-bottom: 15px;
 }
 
-#subfooter ul.menu li,
-ul.menu li {
-  background-color: #FFFFFF;
-}
-
-ul.tabs li a:hover {
-  background-color: #FFFFFF;
-  border:0px;
-}
-
 .node--view-mode-teaser,
-.path-node #content-wrapper
- {
-  border: thin grey solid;
+.path-node #content-wrapper {
   padding: 15px;
-  background-color: #FFFFFF;
-}
-
-.comment {
-  border: thin grey solid;
 }
 
 .field--type-text-with-summary {
   text-align: justify;
+  margin:
+}
+ul.links.field__items li {
+  list-style: circle;
+}
+
+.field--name-field-tags {
+  direction:rtl;
+  text-align:right;
+}
+
+article nav {
+float:right;
+}
+
+.node header {
+  padding-bottom: 0px;
+}
+
+/* Borders */
+
+/* Thin charcoal solid border */
+img, .comment,
+.node--view-mode-teaser,
+.path-node #content-wrapper {
+    border: thin #666666 solid;
+}
+
+/* thick grey dotted border */
+
+a.hover {
+  border-bottom: thick #333333 dotted;
+}
+
+/* No border */
+ul.tabs li a:hover {
+  border: 0px
+}
+
+/* Background colors */
+/* white */
+
+#subfooter ul.menu li,
+ul.menu li, ul.tabs li a:hover,
+.node--view-mode-teaser,
+.path-node #content-wrapper {
+  background-color: #FFFFFF;
 }
 
 /* User menu items */
@@ -111,22 +137,6 @@ ul.menu li {
   text-align:center;
   padding: 20px;
   list-style: none;
-}
-
-/* tag links */
-ul.links.field__items li {
-  list-style: circle;
-}
-
-.field--name-field-tags {
-  direction:rtl;
-  text-align:right;
-}
-
-/* comment links */
-
-article nav {
-float:right;
 }
 
 /* Leaf shape for content containers */
@@ -147,3 +157,93 @@ img, button, .button, .field--type-image,
   border-top-left-radius: 300px;
   border-bottom-right-radius: 300px;
 }
+
+/* MIGRATE */
+
+div.view-header {
+  margin-bottom: 25px;
+  line-height: 1.2;
+  font-family: Gwendolyn;
+  font-size: 38px;
+  color: #51387e;
+}
+
+/* Temp to understand drupal regions
+
+.node__content .clearfix,
+.block-system-main-block,
+div#content-wrapper,
+.region-content,
+#main.clearfix,
+h2.title,
+.node header,
+.node--view-mode-teaser,
+.path-node #content-wrapper,
+.comment, ul.menu li,
+.col-md-8 {
+  border: thick solid black;
+}
+
+.block {
+  border: 2px dashed black;
+}
+
+
+.node__content .clearfix {
+  background-color: orange;
+}
+
+.block-system-main-block {
+  background-color: yellow;
+}
+
+div#content-wrapper {
+  background-color: lightblue;
+}
+
+.region-content {
+  background-color: pink;
+}
+
+#main.clearfix {
+  background-color: green;
+}
+
+h2.title {
+  background-color:red;
+}
+
+.node header {
+  background-color: blue;
+}
+
+.content .node--type-page header {
+  background-color: lightblue;
+  padding-bottom: 0px;
+}
+
+.col-md-8 {
+  background-color: purple;
+}
+
+.node--view-mode-teaser {
+  background-color: cyan;
+}
+
+.path-node #content-wrapper {
+  background-color: blueviolet;
+}
+
+.comment {
+  background-color: darkblue;
+}
+
+.block {
+  background-color: darkseagreen;
+}
+
+ul.menu li {
+  background-color: deeppink;
+}
+
+*/
