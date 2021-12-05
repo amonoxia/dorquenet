@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '91d404dd24ca97c60a49ed1afdb46fbd060f1631',
+        'reference' => 'bf91fe99d8e132da6fdba6b057c3c873a8437d25',
         'name' => 'acquia/drupal-minimal-project',
         'dev' => true,
     ),
@@ -34,7 +34,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '91d404dd24ca97c60a49ed1afdb46fbd060f1631',
+            'reference' => 'bf91fe99d8e132da6fdba6b057c3c873a8437d25',
             'dev_requirement' => false,
         ),
         'asm89/stack-cors' => array(
@@ -276,6 +276,15 @@
             'replaced' => array(
                 0 => '9.2.9',
             ),
+        ),
+        'drupal/admin_toolbar' => array(
+            'pretty_version' => '3.0.3',
+            'version' => '3.0.3.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/admin_toolbar',
+            'aliases' => array(),
+            'reference' => '3.0.3',
+            'dev_requirement' => false,
         ),
         'drupal/adminimal_theme' => array(
             'pretty_version' => '1.6.0',
