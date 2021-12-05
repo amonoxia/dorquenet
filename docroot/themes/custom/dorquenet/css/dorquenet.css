@@ -28,6 +28,7 @@ a {
 
 a:hover {
   text-decoration: none;
+  border-bottom: thick #333333 dotted;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,12 +60,17 @@ h6 {
 
 /* Spacing and Alignment */
 
-h2.title {
-  margin: 0px;
-}
-
 .block {
     padding: 0 0 5px 0;
+}
+
+.node--view-mode-teaser,
+.path-node #content-wrapper {
+  padding: 15px;
+}
+
+.node__content {
+  padding: 0px 40px;
 }
 
 .field--type-image {
@@ -73,15 +79,10 @@ h2.title {
   margin-bottom: 15px;
 }
 
-.node--view-mode-teaser,
-.path-node #content-wrapper {
-  padding: 15px;
-}
-
 .field--type-text-with-summary {
   text-align: justify;
-  margin:
 }
+
 ul.links.field__items li {
   list-style: circle;
 }
@@ -95,10 +96,6 @@ article nav {
 float:right;
 }
 
-.node header {
-  padding-bottom: 0px;
-}
-
 /* Borders */
 
 /* Thin charcoal solid border */
@@ -106,12 +103,6 @@ img, .comment,
 .node--view-mode-teaser,
 .path-node #content-wrapper {
     border: thin #666666 solid;
-}
-
-/* thick grey dotted border */
-
-a.hover {
-  border-bottom: thick #333333 dotted;
 }
 
 /* No border */
@@ -142,11 +133,12 @@ ul.menu li {
 /* Leaf shape for content containers */
 
 .node--view-mode-teaser, .path-node #content-wrapper,
+.region-content, .node__content,
+.field--type-text-with-summary,
 .comment, .block, ul.menu li {
   border-radius: 15px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
-  color: #180527;
 }
 
 /* Reverse leaf shape for smaller objects */
@@ -168,7 +160,7 @@ div.view-header {
   color: #51387e;
 }
 
-/* Temp to understand drupal regions
+/* TEMPLATE DEBUGGING: to debug uncomment out all of the following
 
 .node__content .clearfix,
 .block-system-main-block,
@@ -218,8 +210,7 @@ h2.title {
 }
 
 .content .node--type-page header {
-  background-color: lightblue;
-  padding-bottom: 0px;
+  background-color: darkseagreen;
 }
 
 .col-md-8 {
@@ -239,11 +230,23 @@ h2.title {
 }
 
 .block {
-  background-color: darkseagreen;
+  background-color: lightgrey;
 }
 
 ul.menu li {
   background-color: deeppink;
+}
+
+.field--type-text-with-summary {
+  background-color: lightyellow;
+}
+
+.node__content {
+  background-color:darkkhaki;
+}
+
+.block-block-content {
+  background-color:darkslateblue;
 }
 
 */
