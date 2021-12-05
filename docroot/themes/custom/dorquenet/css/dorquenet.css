@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Playfair Display, serif;
 }
 
+li {
+  list-style: circle;
+}
+
 div.meta.submitted {
   font-size: 16px;
 }
@@ -84,7 +88,15 @@ h6 {
 }
 
 ul.links.field__items li {
-  list-style: circle;
+  list-style: none;
+  float:right;
+  padding: 0 10px;
+  text-transform: uppercase;
+  background-color: #f4f7fb;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px;
+
 }
 
 .field--name-field-tags {
@@ -144,7 +156,9 @@ ul.menu li {
 /* Reverse leaf shape for smaller objects */
 
 img, button, .button, .field--type-image,
-.menu-item, ul.tabs li, input.button {
+.menu-item, ul.tabs li,
+ul.links.field__items li,
+input.button {
   border-radius: 15px;
   border-top-left-radius: 300px;
   border-bottom-right-radius: 300px;
