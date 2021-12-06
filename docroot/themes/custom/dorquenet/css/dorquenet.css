@@ -48,6 +48,10 @@ div.meta.submitted {
   font-size: 85%;
 }
 
+.block-page-title-block {
+  text-transform: capitalize;
+}
+
 /* text colors */
 
 /* purple text */
