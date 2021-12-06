@@ -896,17 +896,17 @@
         },
         {
             "name": "consolidation/self-update",
-            "version": "2.0.0",
-            "version_normalized": "2.0.0.0",
+            "version": "2.0.1",
+            "version_normalized": "2.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/self-update.git",
-                "reference": "7d6877f8006c51069e1469a9c57b1435640f74b7"
+                "reference": "7b9223bdfc1b23ab93489b580382accb6f0411b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/self-update/zipball/7d6877f8006c51069e1469a9c57b1435640f74b7",
-                "reference": "7d6877f8006c51069e1469a9c57b1435640f74b7",
+                "url": "https://api.github.com/repos/consolidation/self-update/zipball/7b9223bdfc1b23ab93489b580382accb6f0411b6",
+                "reference": "7b9223bdfc1b23ab93489b580382accb6f0411b6",
                 "shasum": ""
             },
             "require": {
@@ -915,7 +915,7 @@
                 "symfony/console": "^2.8|^3|^4|^5",
                 "symfony/filesystem": "^2.5|^3|^4|^5"
             },
-            "time": "2021-10-05T23:29:47+00:00",
+            "time": "2021-12-03T23:57:36+00:00",
             "bin": [
                 "scripts/release"
             ],
@@ -948,7 +948,7 @@
             "description": "Provides a self:update command for Symfony Console applications.",
             "support": {
                 "issues": "https://github.com/consolidation/self-update/issues",
-                "source": "https://github.com/consolidation/self-update/tree/2.0.0"
+                "source": "https://github.com/consolidation/self-update/tree/2.0.1"
             },
             "install-path": "../consolidation/self-update"
         },
@@ -2409,17 +2409,17 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.2.9",
-            "version_normalized": "9.2.9.0",
+            "version": "9.2.10",
+            "version_normalized": "9.2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "2e2f015e881abccc32efcd264128e8a8444b2ec1"
+                "reference": "61248f85f78c02e7e0afde2b8a5113d3914bb50f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/2e2f015e881abccc32efcd264128e8a8444b2ec1",
-                "reference": "2e2f015e881abccc32efcd264128e8a8444b2ec1",
+                "url": "https://api.github.com/repos/drupal/core/zipball/61248f85f78c02e7e0afde2b8a5113d3914bb50f",
+                "reference": "61248f85f78c02e7e0afde2b8a5113d3914bb50f",
                 "shasum": ""
             },
             "require": {
@@ -2584,7 +2584,7 @@
                 "drupal/workflows": "self.version",
                 "drupal/workspaces": "self.version"
             },
-            "time": "2021-11-17T21:05:58+00:00",
+            "time": "2021-11-24T14:27:27+00:00",
             "type": "drupal-core",
             "extra": {
                 "drupal-scaffold": {
@@ -2660,14 +2660,14 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.2.9"
+                "source": "https://github.com/drupal/core/tree/9.2.10"
             },
             "install-path": "../../docroot/core"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.2.9",
-            "version_normalized": "9.2.9.0",
+            "version": "9.2.10",
+            "version_normalized": "9.2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -2713,23 +2713,23 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.9"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.10"
             },
             "install-path": "../drupal/core-composer-scaffold"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.2.9",
-            "version_normalized": "9.2.9.0",
+            "version": "9.2.10",
+            "version_normalized": "9.2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "a052e6f47864bb6597e6f449b9cfdb1aa4eea400"
+                "reference": "9beef737bbfd1db4f84ab3c19e5e7ae0b534383b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/a052e6f47864bb6597e6f449b9cfdb1aa4eea400",
-                "reference": "a052e6f47864bb6597e6f449b9cfdb1aa4eea400",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/9beef737bbfd1db4f84ab3c19e5e7ae0b534383b",
+                "reference": "9beef737bbfd1db4f84ab3c19e5e7ae0b534383b",
                 "shasum": ""
             },
             "require": {
@@ -2738,7 +2738,7 @@
                 "doctrine/annotations": "1.13.1",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.2.9",
+                "drupal/core": "9.2.10",
                 "egulias/email-validator": "2.1.25",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.4.1",
@@ -2781,7 +2781,7 @@
                 "symfony/process": "v4.4.25",
                 "symfony/psr-http-message-bridge": "v2.1.0",
                 "symfony/routing": "v4.4.25",
-                "symfony/serializer": "v4.4.25",
+                "symfony/serializer": "v4.4.35",
                 "symfony/service-contracts": "v2.4.0",
                 "symfony/translation": "v4.4.25",
                 "symfony/translation-contracts": "v2.4.0",
@@ -2794,7 +2794,7 @@
             "conflict": {
                 "webflo/drupal-core-strict": "*"
             },
-            "time": "2021-11-17T21:05:58+00:00",
+            "time": "2021-11-24T14:27:27+00:00",
             "type": "metapackage",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2802,7 +2802,7 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.2.9"
+                "source": "https://github.com/drupal/core-recommended/tree/9.2.10"
             },
             "install-path": null
         },
@@ -3285,19 +3285,175 @@
             "install-path": "../../docroot/modules/contrib/spambot"
         },
         {
-            "name": "drupal/token",
-            "version": "1.9.0",
-            "version_normalized": "1.9.0.0",
+            "name": "drupal/term_merge",
+            "version": "dev-1.x",
+            "version_normalized": "dev-1.x",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/token.git",
-                "reference": "8.x-1.9"
+                "url": "https://git.drupalcode.org/project/term_merge.git",
+                "reference": "ba0b6febde373a1c70fe34177055257194141e79"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/term_reference_change": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha2+2-dev",
+                    "datestamp": "1592462758",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "installation-source": "source",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bleen",
+                    "homepage": "https://www.drupal.org/user/77375"
+                },
+                {
+                    "name": "bucefal91",
+                    "homepage": "https://www.drupal.org/user/504128"
+                },
+                {
+                    "name": "eli",
+                    "homepage": "https://www.drupal.org/user/49774"
+                },
+                {
+                    "name": "legolasbo",
+                    "homepage": "https://www.drupal.org/user/2480548"
+                },
+                {
+                    "name": "nylin",
+                    "homepage": "https://www.drupal.org/user/816040"
+                }
+            ],
+            "description": "Allows users to merge taxonomy terms in the same vocabulary together.",
+            "homepage": "https://www.drupal.org/project/term_merge",
+            "support": {
+                "source": "https://git.drupalcode.org/project/term_merge"
+            },
+            "install-path": "../../docroot/modules/contrib/term_merge"
+        },
+        {
+            "name": "drupal/term_merge_manager",
+            "version": "1.0.0-beta9",
+            "version_normalized": "1.0.0.0-beta9",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/term_merge_manager.git",
+                "reference": "8.x-1.0-beta9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.9.zip",
-                "reference": "8.x-1.9",
-                "shasum": "a5d234382a1a0e4ba61d4c7a2fa10671ca656be4"
+                "url": "https://ftp.drupal.org/files/projects/term_merge_manager-8.x-1.0-beta9.zip",
+                "reference": "8.x-1.0-beta9",
+                "shasum": "12e55a39a818292fee11d5b771319f82a3c234da"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/term_merge": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta9",
+                    "datestamp": "1626094555",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mfrosch",
+                    "homepage": "https://www.drupal.org/user/932156"
+                }
+            ],
+            "description": "This module saves term merge actions and reuse the rules for new terms. Also you can manage the rules",
+            "homepage": "https://www.drupal.org/project/term_merge_manager",
+            "support": {
+                "source": "https://git.drupalcode.org/project/term_merge_manager"
+            },
+            "install-path": "../../docroot/modules/contrib/term_merge_manager"
+        },
+        {
+            "name": "drupal/term_reference_change",
+            "version": "1.0.0-beta1",
+            "version_normalized": "1.0.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/term_reference_change.git",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/term_reference_change-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "166711a0c8f9c54055250deac7d74f098a25c885"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1592453666",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "legolasbo",
+                    "homepage": "https://www.drupal.org/user/2480548"
+                }
+            ],
+            "description": "Allows term references to be changed in bulk.",
+            "homepage": "https://www.drupal.org/project/term_reference_change",
+            "support": {
+                "source": "https://git.drupalcode.org/project/term_reference_change"
+            },
+            "install-path": "../../docroot/modules/contrib/term_reference_change"
+        },
+        {
+            "name": "drupal/token",
+            "version": "1.10.0",
+            "version_normalized": "1.10.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/token.git",
+                "reference": "8.x-1.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "8b81224ab0420221b292e8d3b66d0da726317400"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -3305,8 +3461,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.9",
-                    "datestamp": "1608284866",
+                    "version": "8.x-1.10",
+                    "datestamp": "1638619775",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4697,17 +4853,17 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.13.1",
-            "version_normalized": "4.13.1.0",
+            "version": "v4.13.2",
+            "version_normalized": "4.13.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "63a79e8daa781cac14e5195e63ed8ae231dd10fd"
+                "reference": "210577fe3cf7badcc5814d99455df46564f3c077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/63a79e8daa781cac14e5195e63ed8ae231dd10fd",
-                "reference": "63a79e8daa781cac14e5195e63ed8ae231dd10fd",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/210577fe3cf7badcc5814d99455df46564f3c077",
+                "reference": "210577fe3cf7badcc5814d99455df46564f3c077",
                 "shasum": ""
             },
             "require": {
@@ -4718,7 +4874,7 @@
                 "ircmaxell/php-yacc": "^0.0.7",
                 "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
             },
-            "time": "2021-11-03T20:52:16+00:00",
+            "time": "2021-11-30T19:35:32+00:00",
             "bin": [
                 "bin/php-parse"
             ],
@@ -4750,7 +4906,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.1"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
             },
             "install-path": "../nikic/php-parser"
         },
@@ -5579,30 +5735,30 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.9",
-            "version_normalized": "0.10.9.0",
+            "version": "v0.11.0",
+            "version_normalized": "0.11.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "01281336c4ae557fe4a994544f30d3a1bc204375"
+                "reference": "c9a85cd388afde68721d304bbb3257a068f5ab05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/01281336c4ae557fe4a994544f30d3a1bc204375",
-                "reference": "01281336c4ae557fe4a994544f30d3a1bc204375",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/c9a85cd388afde68721d304bbb3257a068f5ab05",
+                "reference": "c9a85cd388afde68721d304bbb3257a068f5ab05",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-tokenizer": "*",
-                "nikic/php-parser": "~4.0|~3.0|~2.0|~1.3",
-                "php": "^8.0 || ^7.0 || ^5.5.9",
-                "symfony/console": "~5.0|~4.0|~3.0|^2.4.2|~2.3.10",
-                "symfony/var-dumper": "~5.0|~4.0|~3.0|~2.7"
+                "nikic/php-parser": "^4.0 || ^3.1",
+                "php": "^8.0 || ^7.0.8",
+                "symfony/console": "^6.0 || ^5.0 || ^4.0 || ^3.4",
+                "symfony/var-dumper": "^6.0 || ^5.0 || ^4.0 || ^3.4"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.2",
-                "hoa/console": "3.17.*"
+                "hoa/console": "3.17.05.02"
             },
             "suggest": {
                 "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
@@ -5611,14 +5767,14 @@
                 "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history.",
                 "hoa/console": "A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit."
             },
-            "time": "2021-10-10T13:37:39+00:00",
+            "time": "2021-12-05T06:09:05+00:00",
             "bin": [
                 "bin/psysh"
             ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.10.x-dev"
+                    "dev-main": "0.11.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -5651,7 +5807,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.10.9"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.0"
             },
             "install-path": "../psy/psysh"
         },
@@ -6521,24 +6677,25 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.3.7",
-            "version_normalized": "5.3.7.0",
+            "version": "v5.4.0",
+            "version_normalized": "5.4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "a10000ada1e600d109a6c7632e9ac42e8bf2fb93"
+                "reference": "d2f29dac98e96a98be467627bd49c2efb1bc2590"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/a10000ada1e600d109a6c7632e9ac42e8bf2fb93",
-                "reference": "a10000ada1e600d109a6c7632e9ac42e8bf2fb93",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/d2f29dac98e96a98be467627bd49c2efb1bc2590",
+                "reference": "d2f29dac98e96a98be467627bd49c2efb1bc2590",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1|^3",
                 "symfony/polyfill-php80": "^1.16"
             },
-            "time": "2021-08-04T21:20:46+00:00",
+            "time": "2021-11-28T15:25:38+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -6566,7 +6723,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.3.7"
+                "source": "https://github.com/symfony/finder/tree/v5.4.0"
             },
             "funding": [
                 {
@@ -7849,22 +8006,23 @@
         },
         {
             "name": "symfony/serializer",
-            "version": "v4.4.25",
-            "version_normalized": "4.4.25.0",
+            "version": "v4.4.35",
+            "version_normalized": "4.4.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "6db3eb4f1bb437cd3730f52353ba4b568acaddf5"
+                "reference": "1b2ae02cb1b923987947e013688c51954a80b751"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/6db3eb4f1bb437cd3730f52353ba4b568acaddf5",
-                "reference": "6db3eb4f1bb437cd3730f52353ba4b568acaddf5",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/1b2ae02cb1b923987947e013688c51954a80b751",
+                "reference": "1b2ae02cb1b923987947e013688c51954a80b751",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.3",
-                "symfony/polyfill-ctype": "~1.8"
+                "symfony/polyfill-ctype": "~1.8",
+                "symfony/polyfill-php80": "^1.16"
             },
             "conflict": {
                 "phpdocumentor/reflection-docblock": "<3.0|>=3.2.0,<3.2.2",
@@ -7897,7 +8055,7 @@
                 "symfony/property-info": "To deserialize relations.",
                 "symfony/yaml": "For using the default YAML mapping loader."
             },
-            "time": "2021-05-26T11:20:16+00:00",
+            "time": "2021-11-24T08:12:42+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -7925,7 +8083,7 @@
             "description": "Handles serializing and deserializing data structures, including object graphs, into array structures or other formats like XML and JSON.",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/serializer/tree/v4.4.25"
+                "source": "https://github.com/symfony/serializer/tree/v4.4.35"
             },
             "funding": [
                 {

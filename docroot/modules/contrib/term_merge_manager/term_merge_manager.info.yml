@@ -1,0 +1,13 @@
+name: 'Term Merge Manager'
+type: module
+description: 'This module saves term merge actions and reuse the rules for new terms. Also you can manage the rules'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Taxonomy'
+dependencies:
+  - term_merge
+
+# Information added by Drupal.org packaging script on 2021-07-12
+version: '8.x-1.0-beta9'
+project: 'term_merge_manager'
+datestamp: 1626094557
