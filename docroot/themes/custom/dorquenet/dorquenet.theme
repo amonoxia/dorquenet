@@ -7,7 +7,7 @@ function dorquenet_preprocess_node__article(&$variables) {
 // Getting the node creation time stamp from the node object.
 $date = $variables['node']->getCreatedTime();
 // Here you can use drupal's format_date() function, or some custom PHP date formatting.
-$variables['date'] = \Drupal::service('date.formatter')->format($date, 'dorquenet_long');
+$variables['date'] = \Drupal::service('date.formatter')->format($date, 'dorquenet_medium');
 }
 
 /**

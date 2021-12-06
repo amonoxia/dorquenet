@@ -1,0 +1,8 @@
+uuid: 609f0a70-b7d2-4f41-bf77-1af8445115d8
+langcode: en
+status: true
+dependencies: {  }
+id: dorquenet_medium
+label: dorquenet_medium
+locked: false
+pattern: 'l, F n, Y'

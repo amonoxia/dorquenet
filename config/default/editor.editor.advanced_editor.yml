@@ -18,6 +18,13 @@ settings:
             - Styles
             - Bold
             - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - JustifyLeft
+            - JustifyRight
+            - JustifyCenter
+            - JustifyBlock
             - Format
         -
           name: Links
@@ -29,6 +36,7 @@ settings:
           items:
             - BulletedList
             - NumberedList
+            - Table
         -
           name: Media
           items:
@@ -38,6 +46,7 @@ settings:
           name: Tools
           items:
             - Source
+            - PasteFromWord
             - Maximize
   plugins:
     language:
