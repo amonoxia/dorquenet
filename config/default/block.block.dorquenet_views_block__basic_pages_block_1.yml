@@ -12,7 +12,7 @@ dependencies:
 id: dorquenet_views_block__basic_pages_block_1
 theme: dorquenet
 region: sidebar_second
-weight: -7
+weight: -6
 provider: null
 plugin: 'views_block:basic_pages-block_1'
 settings:

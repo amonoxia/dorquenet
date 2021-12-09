@@ -1,0 +1,30 @@
+uuid: c51e85a2-df89-42f0-b41b-ef2c30acec3d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:295b2be0-4578-44f0-ac47-ca0829023862'
+  module:
+    - block_content
+    - system
+  theme:
+    - dorquenet
+id: monogram
+theme: dorquenet
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'block_content:295b2be0-4578-44f0-ac47-ca0829023862'
+settings:
+  id: 'block_content:295b2be0-4578-44f0-ac47-ca0829023862'
+  label: Monogram
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/contact\r\n/user/*\r\n/user"

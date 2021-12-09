@@ -13,7 +13,7 @@ _core:
 id: dorquenet_tools
 theme: dorquenet
 region: sidebar_second
-weight: -6
+weight: -5
 provider: null
 plugin: 'system_menu_block:tools'
 settings:
