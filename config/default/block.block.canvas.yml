@@ -17,8 +17,8 @@ plugin: 'block_content:336a6271-2590-497e-aa6f-2a08907afd64'
 settings:
   id: 'block_content:336a6271-2590-497e-aa6f-2a08907afd64'
   label: Canvas
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

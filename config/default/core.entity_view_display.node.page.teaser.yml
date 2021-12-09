@@ -21,22 +21,22 @@ bundle: page
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_trimmed
-    weight: 1
-    region: content
+    label: hidden
     settings:
       trim_length: 150
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_image:
     type: image
-    weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: thumbnail
       image_link: content
+      image_style: thumbnail
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_attachment: true
   langcode: true

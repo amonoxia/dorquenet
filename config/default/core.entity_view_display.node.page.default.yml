@@ -21,34 +21,34 @@ bundle: page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
-    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_attachment:
-    weight: 3
+    type: file_default
     label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    type: file_default
+    weight: 3
     region: content
   field_image:
-    weight: 1
+    type: image
     label: hidden
     settings:
-      image_style: article_teaser
       image_link: ''
+      image_style: article_teaser
     third_party_settings: {  }
-    type: image
+    weight: 1
     region: content
   links:
-    weight: 2
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   langcode: true
   search_api_excerpt: true

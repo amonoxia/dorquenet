@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: aNFJG-tWddQep6B-1W1swIU-2DlLJTodlgFypPfxxI0
 spambot_whitelist_email: ''
 spambot_whitelist_username: ''
 spambot_whitelist_ip: ''
@@ -21,5 +23,3 @@ spambot_blocked_message_ip: 'Your email address or username or IP address is bla
 spambot_enable_cache: 1
 spambot_cache_expire: -1
 spambot_cache_expire_false: -1
-_core:
-  default_config_hash: aNFJG-tWddQep6B-1W1swIU-2DlLJTodlgFypPfxxI0

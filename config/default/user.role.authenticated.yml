@@ -1,7 +1,15 @@
 uuid: baac842a-e8b2-4b7f-a9fd-6bb622170fa4
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_editor
+  module:
+    - comment
+    - contact
+    - filter
+    - shortcut
+    - system
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated
@@ -14,6 +22,5 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'post comments'
-  - 'search content'
   - 'skip comment approval'
   - 'use text format basic_editor'

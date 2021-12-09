@@ -17,8 +17,8 @@ plugin: 'block_content:3b386f02-04b8-4c22-8677-af24272ef752'
 settings:
   id: 'block_content:3b386f02-04b8-4c22-8677-af24272ef752'
   label: 'Background Effect Instructions'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

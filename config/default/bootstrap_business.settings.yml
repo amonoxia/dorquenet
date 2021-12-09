@@ -1,15 +1,15 @@
-scrolltop_display: 1
-bootstrap_remote_type: cdn
 _core:
   default_config_hash: LRraV6G0LyMg0shQWbzFApKRHEY0fAsGi6eEG5LeU7E
+favicon:
+  use_default: true
 features:
-  node_user_picture: false
   comment_user_picture: true
   comment_user_verification: false
   favicon: true
+  node_user_picture: false
 logo:
   use_default: true
-favicon:
-  use_default: true
+scrolltop_display: 1
+bootstrap_remote_type: cdn
 scrolltop: ''
 premium_description: ''
