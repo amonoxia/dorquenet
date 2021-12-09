@@ -9,7 +9,7 @@ _core:
 id: dorquenet_page_title
 theme: dorquenet
 region: content
-weight: -6
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

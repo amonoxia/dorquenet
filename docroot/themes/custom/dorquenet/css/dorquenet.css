@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ul li {
-  list-style: circle;
+  list-style: disk;
 }
 
 div.meta.submitted {
@@ -142,22 +142,31 @@ ul.menu li, ul.tabs li a:hover,
   background-color: #FFFFFF;
 }
 
-/* User menu items */
-ul.menu li {
+/* Menus */
+.region-sidebar-second ul.menu li {
   border: 0px;
-  border-bottom: 2px grey solid;
-  margin-bottom:15px;
+  border-bottom: 3px #51387e solid;
   text-align:center;
-  padding: 20px;
+  padding: 10px;
+  margin-right:25px;
+  margin-bottom:15px;
   list-style: none;
+  width: 150px;
+  float:right;
+}
+
+#main-navigation ul.menu li a {
+  padding: 5px;
+  margin: 20px;
 }
 
 /* Leaf shape for content containers */
 
 .node--view-mode-teaser, .path-node #content-wrapper,
 .region-content, .node__content,
+div.messages.messages--status,
 .field--type-text-with-summary,
-.comment, .block, ul.menu li {
+.comment, .block{
   border-radius: 15px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
@@ -166,12 +175,25 @@ ul.menu li {
 /* Reverse leaf shape for smaller objects */
 
 img, button, .button, .field--type-image,
-.menu-item, ul.tabs li,
+.menu-item, ul.tabs li, ul.menu li,
 ul.links.field__items li,
+#main-navigation ul.menu li,
 input.button {
   border-radius: 15px;
   border-top-left-radius: 300px;
   border-bottom-right-radius: 300px;
+}
+
+/* Containers that aren't a leaf */
+
+figure.caption-img img {
+  border-radius: 15px;
+}
+
+div.messages.messages--status {
+  margin-right:0px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 150px;
 }
 
 /* MIGRATE */
