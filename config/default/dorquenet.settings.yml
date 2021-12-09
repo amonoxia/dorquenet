@@ -5,10 +5,10 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://dorquenet_logo.png'
+  path: themes/custom/dorquenet/images/dorquenet_logo.png
 favicon:
   use_default: 0
-  path: 'public://favicon.ico'
+  path: themes/custom/dorquenet/images/favicon.ico
   mimetype: image/vnd.microsoft.icon
 scrolltop: ''
 scrolltop_display: 1
