@@ -1,0 +1,14 @@
+features:
+  node_user_picture: 0
+  comment_user_picture: 1
+  comment_user_verification: 0
+  favicon: 1
+logo:
+  use_default: 0
+  path: 'public://favicon-16x16.png'
+favicon:
+  use_default: 0
+  path: 'public://favicon_0.ico'
+  mimetype: image/vnd.microsoft.icon
+custom_css: 0
+disable_google_fonts: 0

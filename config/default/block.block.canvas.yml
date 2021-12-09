@@ -11,7 +11,7 @@ dependencies:
 id: canvas
 theme: dorquenet
 region: header
-weight: -8
+weight: -7
 provider: null
 plugin: 'block_content:336a6271-2590-497e-aa6f-2a08907afd64'
 settings:
