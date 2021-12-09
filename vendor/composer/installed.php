@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '495f9559d759c12353c09860a31d7ca88e660db5',
+        'reference' => '51cece4ca520e47bbb31bb5edc09d38881cac16b',
         'name' => 'acquia/drupal-minimal-project',
         'dev' => true,
     ),
@@ -34,7 +34,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '495f9559d759c12353c09860a31d7ca88e660db5',
+            'reference' => '51cece4ca520e47bbb31bb5edc09d38881cac16b',
             'dev_requirement' => false,
         ),
         'asm89/stack-cors' => array(
@@ -703,6 +703,15 @@
                 0 => '9.3.0',
             ),
         ),
+        'drupal/google_api_client' => array(
+            'pretty_version' => '4.0.0',
+            'version' => '4.0.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/google_api_client',
+            'aliases' => array(),
+            'reference' => '8.x-4.0',
+            'dev_requirement' => false,
+        ),
         'drupal/hal' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -789,6 +798,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/media_entity_remote_google_photos' => array(
+            'pretty_version' => '1.1.2',
+            'version' => '1.1.2.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/media_entity_remote_google_photos',
+            'aliases' => array(),
+            'reference' => '1.1.2',
+            'dev_requirement' => false,
         ),
         'drupal/media_library' => array(
             'dev_requirement' => false,
@@ -1131,6 +1149,42 @@
             'reference' => 'dc5bce653fa4d9c792e9dcffa728c0642847c1e1',
             'dev_requirement' => false,
         ),
+        'firebase/php-jwt' => array(
+            'pretty_version' => 'v5.5.1',
+            'version' => '5.5.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../firebase/php-jwt',
+            'aliases' => array(),
+            'reference' => '83b609028194aa042ea33b5af2d41a7427de80e6',
+            'dev_requirement' => false,
+        ),
+        'google/apiclient' => array(
+            'pretty_version' => 'v2.12.1',
+            'version' => '2.12.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../google/apiclient',
+            'aliases' => array(),
+            'reference' => '1530583a711f4414407112c4068464bcbace1c71',
+            'dev_requirement' => false,
+        ),
+        'google/apiclient-services' => array(
+            'pretty_version' => 'v0.200.0',
+            'version' => '0.200.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../google/apiclient-services',
+            'aliases' => array(),
+            'reference' => '0375af405757b36f3bcc82e19d7daf61e0b4cfd8',
+            'dev_requirement' => false,
+        ),
+        'google/auth' => array(
+            'pretty_version' => 'v1.18.0',
+            'version' => '1.18.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../google/auth',
+            'aliases' => array(),
+            'reference' => '21dd478e77b0634ed9e3a68613f74ed250ca9347',
+            'dev_requirement' => false,
+        ),
         'grasmash/expander' => array(
             'pretty_version' => '1.0.0',
             'version' => '1.0.0.0',
@@ -1248,6 +1302,15 @@
             'reference' => 'f640ac1bdddff06ea333a920c95bbad8872429ab',
             'dev_requirement' => false,
         ),
+        'monolog/monolog' => array(
+            'pretty_version' => '2.3.5',
+            'version' => '2.3.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../monolog/monolog',
+            'aliases' => array(),
+            'reference' => 'fd4380d6fc37626e2f799f29d91195040137eba9',
+            'dev_requirement' => false,
+        ),
         'myclabs/php-enum' => array(
             'pretty_version' => '1.8.3',
             'version' => '1.8.3.0',
@@ -1271,6 +1334,24 @@
             'replaced' => array(
                 0 => '~2.0',
             ),
+        ),
+        'paragonie/constant_time_encoding' => array(
+            'pretty_version' => 'v2.4.0',
+            'version' => '2.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../paragonie/constant_time_encoding',
+            'aliases' => array(),
+            'reference' => 'f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c',
+            'dev_requirement' => false,
+        ),
+        'paragonie/random_compat' => array(
+            'pretty_version' => 'v9.99.100',
+            'version' => '9.99.100.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../paragonie/random_compat',
+            'aliases' => array(),
+            'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
+            'dev_requirement' => false,
         ),
         'pear/archive_tar' => array(
             'pretty_version' => '1.4.14',
@@ -1345,6 +1426,15 @@
             'install_path' => __DIR__ . '/../php-http/promise',
             'aliases' => array(),
             'reference' => '4c4c1f9b7289a2ec57cde7f1e9762a5789506f88',
+            'dev_requirement' => false,
+        ),
+        'phpseclib/phpseclib' => array(
+            'pretty_version' => '3.0.12',
+            'version' => '3.0.12.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpseclib/phpseclib',
+            'aliases' => array(),
+            'reference' => '89bfb45bd8b1abc3b37e910d57f5dbd3174f40fb',
             'dev_requirement' => false,
         ),
         'psr/cache' => array(
@@ -1445,7 +1535,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psy/psysh' => array(

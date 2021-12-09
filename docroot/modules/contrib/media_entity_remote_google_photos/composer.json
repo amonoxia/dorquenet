@@ -1,0 +1,19 @@
+{
+    "name": "drupal/media_entity_remote_google_photos",
+    "description": "Custom Media type to use Google Photos as remote Media source",
+    "type": "drupal-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yuseferi",
+            "email": "yuseferi@gmail.com"
+        }
+    ],
+    "require": {},
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    }
+}

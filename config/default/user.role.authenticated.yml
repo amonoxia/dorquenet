@@ -8,6 +8,7 @@ dependencies:
     - comment
     - contact
     - filter
+    - media
     - shortcut
     - system
 _core:
@@ -24,3 +25,4 @@ permissions:
   - 'post comments'
   - 'skip comment approval'
   - 'use text format basic_editor'
+  - 'view media'

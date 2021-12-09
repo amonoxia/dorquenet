@@ -1,0 +1,22 @@
+media_entity_remote_google_photos.settings:
+  type: config_object
+  label: 'Media entity for Remote Google photos settings'
+  mapping:
+    local_images:
+      type: string
+      label: 'Base folder for thumbnails'
+
+media.source.remote_google_photos:
+  type: media.source.field_aware
+  label: '"Remote Google photos" media source configuration'
+
+field.formatter.settings.remote_google_photos_embed:
+  type: mapping
+  label: 'Remote Google photos field display format settings'
+  mapping:
+    width:
+      type: integer
+      label: 'Width'
+    height:
+      type: integer
+      label: 'Height'

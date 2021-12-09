@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Contains media_entity_remote_google_photos.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\media_entity_remote_google_photos\Form\RemoteGooglePhotosForm;
+
+/**
+ * Implements hook_media_source_info_alter().
+ */
+function media_entity_remote_google_photos_media_source_info_alter(array &$sources) {
+  $sources['rgp_url']['forms']['media_library_add'] = RemoteGooglePhotosForm::class;
+}
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function media_entity_remote_google_photos_form_media_remote_google_photos_edit_form_alter(&$form, FormStateInterface $form_state) {
+  $form['actions']['submit']['#submit'][] = '_force_update_media_name';
+}
+
+/**
+ * Shim to stop title from being overwritten by tokenized version.
+ *
+ * When updating both the url and the title of a remote Google photos,
+ * for some reason the title is overridden and replaced
+ * with a tokenized version of the entity route.
+ *
+ * The root cause of this issue is currently unknown.
+ *
+ * Since the form_submit handler runs after hook_entity_presave,
+ * we simply grab the $name from the submitted form and resave
+ * the entity.
+ *
+ * This still ends up with the stale tile being displayed in the
+ * "entity successfully saved" message, but that is a lower priority.
+ *
+ * @todo: Fix the noted message and/or root cause
+ */
+function _force_update_media_name($form, FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+  $name = $values['name'][0]['value'];
+  $path = $values['path'][0]['source'];
+
+  $path = explode('/', $path);
+  $media_id = $path[2];
+
+  $media_entity = \Drupal::entityTypeManager()
+    ->getStorage('media')
+    ->load($media_id);
+
+  $media_entity->setName($name)->save();
+}
