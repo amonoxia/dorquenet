@@ -56,6 +56,7 @@ div.meta.submitted {
 
 /* purple text */
 a, .label,
+input.form-text, input.form-email, input.form-search, textarea.form-textarea, select,
 div.meta.submitted {
   color: #51387e;
 }
@@ -72,6 +73,10 @@ h6 {
 }
 
 /* Spacing and Alignment */
+
+input.form-text, input.form-email, input.form-search, textarea.form-textarea, select {
+  padding:10px;
+}
 
 .block {
     padding: 0 0 5px 0;
@@ -129,7 +134,7 @@ img, .comment,
 
 /* No border */
 ul.tabs li a:hover {
-  border: 0px
+  border: 0px;
 }
 
 /* Background colors */
@@ -165,6 +170,7 @@ ul.menu li, ul.tabs li a:hover,
 .node--view-mode-teaser, .path-node #content-wrapper,
 .region-content, .node__content,
 div.messages.messages--status,
+.item-list ul li,
 .field--type-text-with-summary,
 .comment, .block{
   border-radius: 15px;
@@ -296,3 +302,12 @@ ul.menu li {
 }
 
 */
+
+.item-list ul li {
+  background-color: #FFFFFF;
+  opacity: 80%;
+  border: 1px grey solid;
+  padding: 15px;
+  padding-bottom: 50px;
+  margin-bottom: 25px;
+}
