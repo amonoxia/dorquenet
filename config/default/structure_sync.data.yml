@@ -1,5 +1,18 @@
 blocks:
   -
+    info: Copyright
+    langcode: en
+    uuid: c0b3ce3d-5a9a-4bf7-9ac7-74a535483569
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p class=\"text-align-center\"><sub>Ⓒ2022 Christia Hall. Built with <a href=\"https://drupal.org\">Drupal</a>. Hosted on <a href=\"https://acquia.com\">Acquia</a>.</sub></p>\r\n"
+          summary: ''
+          format: advanced_editor
+  -
     info: 'Little Logo'
     langcode: en
     uuid: 295b2be0-4578-44f0-ac47-ca0829023862
@@ -22,7 +35,7 @@ blocks:
     fields:
       body:
         -
-          value: "<p>Click once to change colors. Click twice to erase. Move slowly.</p>\r\n"
+          value: "<p>Click once to change colors. Click twice to erase. Move slowly.<br />\r\nJavascript created by&nbsp;<a href=\"https://codepen.io/tholman/pen/ifDak\">Tim Holman</a>. See it at <a href=\"https://codepen.io/tholman/pen/ifDak\">CodePen</a>.</p>\r\n"
           summary: ''
           format: advanced_editor
   -
