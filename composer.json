@@ -26,6 +26,7 @@
         "drupal/pathauto": "^1.8",
         "drupal/redirect": "^1.6",
         "drupal/spambot": "^1.2",
+        "drupal/structure_sync": "^2.0",
         "drupal/term_merge_manager": "^1.0@beta",
         "drush/drush": "^10.6"
     },
