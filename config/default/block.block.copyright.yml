@@ -1,0 +1,25 @@
+uuid: c016aff4-b588-484d-ab93-94717ba16cac
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c0b3ce3d-5a9a-4bf7-9ac7-74a535483569'
+  module:
+    - block_content
+  theme:
+    - dorquenet
+id: copyright
+theme: dorquenet
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:c0b3ce3d-5a9a-4bf7-9ac7-74a535483569'
+settings:
+  id: 'block_content:c0b3ce3d-5a9a-4bf7-9ac7-74a535483569'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
