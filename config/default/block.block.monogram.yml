@@ -17,8 +17,8 @@ provider: null
 plugin: 'block_content:295b2be0-4578-44f0-ac47-ca0829023862'
 settings:
   id: 'block_content:295b2be0-4578-44f0-ac47-ca0829023862'
-  label: Monogram
-  label_display: '0'
+  label: 'Little Logo'
+  label_display: visible
   provider: block_content
   status: true
   info: ''
