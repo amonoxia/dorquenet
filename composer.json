@@ -21,6 +21,7 @@
         "drupal/bootstrap_business": "^1.0@beta",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-recommended": "^9",
+        "drupal/google_api_client": "^4.0",
         "drupal/media_entity_remote_google_photos": "^1.1",
         "drupal/pathauto": "^1.8",
         "drupal/redirect": "^1.6",
@@ -29,7 +30,12 @@
         "drush/drush": "^10.6"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "cweagans/composer-patches": true,
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true
+        }
     },
     "extra": {
         "drupal-scaffold": {
