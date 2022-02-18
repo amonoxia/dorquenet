@@ -9,7 +9,7 @@ blocks:
     fields:
       body:
         -
-          value: "<p class=\"text-align-center\"><sub>Ⓒ2022 Christia Hall. Built with <a href=\"https://drupal.org\">Drupal</a>. Hosted on <a href=\"https://acquia.com\">Acquia</a>.</sub></p>\r\n"
+          value: "<p class=\"text-align-center\"><sub>Ⓒ2022 Christia Hall. Built with <a href=\"https://drupal.org\">Drupal</a>. Hosted on <a href=\"https://acquia.com\">Acquia</a>. Hello, World!</sub></p>\r\n"
           summary: ''
           format: advanced_editor
   -
