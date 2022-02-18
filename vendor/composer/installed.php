@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1182ba52829d3da2ed0abf1dd8be2dd62a59eb32',
+        'reference' => 'df5dbed8a3acf33d67eceaea7e31e57fa2bb5312',
         'name' => 'acquia/drupal-minimal-project',
         'dev' => true,
     ),
@@ -34,7 +34,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1182ba52829d3da2ed0abf1dd8be2dd62a59eb32',
+            'reference' => 'df5dbed8a3acf33d67eceaea7e31e57fa2bb5312',
             'dev_requirement' => false,
         ),
         'asm89/stack-cors' => array(
@@ -1551,8 +1551,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psy/psysh' => array(
