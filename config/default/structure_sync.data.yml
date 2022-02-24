@@ -1,56 +1,3 @@
-blocks:
-  -
-    info: Copyright
-    langcode: en
-    uuid: c0b3ce3d-5a9a-4bf7-9ac7-74a535483569
-    bundle: basic
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        -
-          value: "<p class=\"text-align-center\"><sub>Ⓒ2022 Christia Hall. Built with <a href=\"https://drupal.org\">Drupal</a>. Hosted on <a href=\"https://acquia.com\">Acquia</a>. Hello, World!</sub></p>\r\n"
-          summary: ''
-          format: advanced_editor
-  -
-    info: 'Little Logo'
-    langcode: en
-    uuid: 295b2be0-4578-44f0-ac47-ca0829023862
-    bundle: basic
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        -
-          value: "<h1><a href=\"/index.php\"><img alt=\"DorqueNet\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"58\" src=\"/sites/default/files/dorquenet_logo.png\" width=\"58\" /></a><sup>Dorque.Net</sup></h1>\r\n\r\n<p>A Christia Acquian Playground</p>\r\n"
-          summary: ''
-          format: advanced_editor
-  -
-    info: 'DotSplash Background Effect Instructions'
-    langcode: en
-    uuid: 3b386f02-04b8-4c22-8677-af24272ef752
-    bundle: basic
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        -
-          value: "<p>Click once to change colors. Click twice to erase. Move slowly.<br />\r\nJavascript created by&nbsp;<a href=\"https://codepen.io/tholman/pen/ifDak\">Tim Holman</a>. See it at <a href=\"https://codepen.io/tholman/pen/ifDak\">CodePen</a>.</p>\r\n"
-          summary: ''
-          format: advanced_editor
-  -
-    info: Canvas
-    langcode: en
-    uuid: 336a6271-2590-497e-aa6f-2a08907afd64
-    bundle: basic
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        -
-          value: "<canvas id=\"canvas\"></canvas>\r\n"
-          summary: ''
-          format: advanced_editor
 menus:
   -
     menu_name: footer
@@ -160,3 +107,56 @@ menus:
     weight: '-47'
     langcode: en
     uuid: 08103b95-61be-4c04-bbb4-ddb1eccc7289
+blocks:
+  -
+    info: Canvas
+    langcode: en
+    uuid: 336a6271-2590-497e-aa6f-2a08907afd64
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<canvas id=\"canvas\"></canvas>\r\n"
+          summary: ''
+          format: advanced_editor
+  -
+    info: 'DotSplash Background Effect Instructions'
+    langcode: en
+    uuid: 3b386f02-04b8-4c22-8677-af24272ef752
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p>Click once to change colors. Click twice to erase. Move slowly.<br />\r\nJavascript created by&nbsp;<a href=\"https://codepen.io/tholman/pen/ifDak\">Tim Holman</a>. See it at <a href=\"https://codepen.io/tholman/pen/ifDak\">CodePen</a>.</p>\r\n"
+          summary: ''
+          format: advanced_editor
+  -
+    info: Monogram
+    langcode: en
+    uuid: 295b2be0-4578-44f0-ac47-ca0829023862
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<h1><a href=\"/index.php\"><img alt=\"DorqueNet\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"58\" src=\"/sites/default/files/dorquenet_logo.png\" width=\"58\" /></a><sup>Dorque.Net</sup></h1>\r\n\r\n<p>A Christia Acquian Playground</p>\r\n"
+          summary: ''
+          format: advanced_editor
+  -
+    info: Copyright
+    langcode: en
+    uuid: c0b3ce3d-5a9a-4bf7-9ac7-74a535483569
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<p class=\"text-align-center\"><sub>Ⓒ2022 Christia Hall. Built with <a href=\"https://drupal.org\">Drupal</a>. Hosted on <a href=\"https://acquia.com\">Acquia</a>. Hello, World!</sub></p>\r\n"
+          summary: ''
+          format: advanced_editor
