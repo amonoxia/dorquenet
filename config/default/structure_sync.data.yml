@@ -51,3 +51,112 @@ blocks:
           value: "<canvas id=\"canvas\"></canvas>\r\n"
           summary: ''
           format: advanced_editor
+menus:
+  -
+    menu_name: footer
+    title: 'Abluo Exerci'
+    parent: null
+    uri: 'entity:node/71'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: fb3dfa6a-9d2b-44f2-b7e3-a2bd1fb5ca33
+  -
+    menu_name: footer
+    title: Resume
+    parent: null
+    uri: 'entity:node/109'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: a94f079b-c4a0-4d08-954a-9e3358ef2f45
+  -
+    menu_name: main
+    title: 'Eu In'
+    parent: null
+    uri: 'entity:node/102'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '1'
+    weight: '-49'
+    langcode: en
+    uuid: bea87e51-98ec-41ad-8eb0-bd038c501afa
+  -
+    menu_name: main
+    title: 'Capto Saepius'
+    parent: null
+    uri: 'entity:node/108'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-48'
+    langcode: en
+    uuid: 292528cc-0775-4557-983f-e601eff5619d
+  -
+    menu_name: main
+    title: 'Nibh Populus'
+    parent: 'menu_link_content:08103b95-61be-4c04-bbb4-ddb1eccc7289'
+    uri: 'entity:node/44'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-46'
+    langcode: en
+    uuid: 700078c9-4d14-4075-b132-ea2dd98749de
+  -
+    menu_name: main
+    title: Fere
+    parent: null
+    uri: 'entity:node/28'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '-44'
+    langcode: en
+    uuid: 89f6955d-909a-492e-8b23-c882b038510b
+  -
+    menu_name: main
+    title: 'Huic Luctus'
+    parent: null
+    uri: 'entity:node/5'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '1'
+    weight: '-46'
+    langcode: en
+    uuid: 61f37f38-a438-4b45-95b3-039efcd186c8
+  -
+    menu_name: main
+    title: 'Abluo Iustum Vicis'
+    parent: 'menu_link_content:61f37f38-a438-4b45-95b3-039efcd186c8'
+    uri: 'entity:node/110'
+    link_title: null
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: da6d3cd1-dcaf-4d0b-ad91-84f765e8963d
+  -
+    menu_name: main
+    title: 'Exputo Populus'
+    parent: null
+    uri: 'entity:node/20'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '1'
+    weight: '-47'
+    langcode: en
+    uuid: 08103b95-61be-4c04-bbb4-ddb1eccc7289
