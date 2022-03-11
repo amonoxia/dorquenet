@@ -1,0 +1,17 @@
+uuid: 989509a2-a646-456f-a633-51bf72a724f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Photo
+type: photo
+description: 'Photos for the gallery '
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
