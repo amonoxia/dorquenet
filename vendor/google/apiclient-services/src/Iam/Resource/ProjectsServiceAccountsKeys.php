@@ -18,6 +18,8 @@
 namespace Google\Service\Iam\Resource;
 
 use Google\Service\Iam\CreateServiceAccountKeyRequest;
+use Google\Service\Iam\DisableServiceAccountKeyRequest;
+use Google\Service\Iam\EnableServiceAccountKeyRequest;
 use Google\Service\Iam\IamEmpty;
 use Google\Service\Iam\ListServiceAccountKeysResponse;
 use Google\Service\Iam\ServiceAccountKey;
@@ -72,6 +74,45 @@ class ProjectsServiceAccountsKeys extends \Google\Service\Resource
     return $this->call('delete', [$params], IamEmpty::class);
   }
   /**
+   * Disable a ServiceAccountKey. A disabled service account key can be enabled
+   * through EnableServiceAccountKey. (keys.disable)
+   *
+   * @param string $name Required. The resource name of the service account key in
+   * the following format:
+   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a
+   * wildcard for the `PROJECT_ID` will infer the project from the account. The
+   * `ACCOUNT` value can be the `email` address or the `unique_id` of the service
+   * account.
+   * @param DisableServiceAccountKeyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return IamEmpty
+   */
+  public function disable($name, DisableServiceAccountKeyRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('disable', [$params], IamEmpty::class);
+  }
+  /**
+   * Enable a ServiceAccountKey. (keys.enable)
+   *
+   * @param string $name Required. The resource name of the service account key in
+   * the following format:
+   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a
+   * wildcard for the `PROJECT_ID` will infer the project from the account. The
+   * `ACCOUNT` value can be the `email` address or the `unique_id` of the service
+   * account.
+   * @param EnableServiceAccountKeyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return IamEmpty
+   */
+  public function enable($name, EnableServiceAccountKeyRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('enable', [$params], IamEmpty::class);
+  }
+  /**
    * Gets a ServiceAccountKey. (keys.get)
    *
    * @param string $name Required. The resource name of the service account key in
@@ -82,8 +123,9 @@ class ProjectsServiceAccountsKeys extends \Google\Service\Resource
    * account.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string publicKeyType The output format of the public key
-   * requested. X509_PEM is the default output format.
+   * @opt_param string publicKeyType Optional. The output format of the public
+   * key. The default is `TYPE_NONE`, which means that the public key is not
+   * returned.
    * @return ServiceAccountKey
    */
   public function get($name, $optParams = [])

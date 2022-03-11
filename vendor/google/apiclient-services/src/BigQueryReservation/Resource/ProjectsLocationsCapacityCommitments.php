@@ -45,8 +45,9 @@ class ProjectsLocationsCapacityCommitments extends \Google\Service\Resource
    * @opt_param string capacityCommitmentId The optional capacity commitment ID.
    * Capacity commitment name will be generated automatically if this field is
    * empty. This field must only contain lower case alphanumeric characters or
-   * dash. Max length is 64 characters. NOTE: this ID won't be kept if the
-   * capacity commitment is split or merged.
+   * dashes. The first and last character cannot be a dash. Max length is 64
+   * characters. NOTE: this ID won't be kept if the capacity commitment is split
+   * or merged.
    * @opt_param bool enforceSingleAdminProjectPerOrg If true, fail the request if
    * another project in the organization has a capacity commitment.
    * @return CapacityCommitment
@@ -65,6 +66,10 @@ class ProjectsLocationsCapacityCommitments extends \Google\Service\Resource
    * @param string $name Required. Resource name of the capacity commitment to
    * delete. E.g., `projects/myproject/locations/US/capacityCommitments/123`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool force Can be used to force delete commitments even if
+   * assignments exist. Deleting commitments with assignments may cause queries to
+   * fail if they no longer have access to slots.
    * @return BigqueryreservationEmpty
    */
   public function delete($name, $optParams = [])
@@ -134,6 +139,9 @@ class ProjectsLocationsCapacityCommitments extends \Google\Service\Resource
    *
    * @param string $name Output only. The resource name of the capacity
    * commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
+   * For the commitment id, it must only contain lower case alphanumeric
+   * characters or dashes.It must start with a letter and must not end with a
+   * dash. Its maximum length is 64 characters.
    * @param CapacityCommitment $postBody
    * @param array $optParams Optional parameters.
    *

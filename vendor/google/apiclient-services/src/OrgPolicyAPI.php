@@ -23,7 +23,7 @@ use Google\Client;
  * Service definition for OrgPolicyAPI (v2).
  *
  * <p>
- * The Org Policy API allows users to configure governance ruleson their GCP
+ * The Org Policy API allows users to configure governance rules on their GCP
  * resources across the Cloud Resource Hierarchy.</p>
  *
  * <p>
@@ -35,7 +35,7 @@ use Google\Client;
  */
 class OrgPolicyAPI extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 

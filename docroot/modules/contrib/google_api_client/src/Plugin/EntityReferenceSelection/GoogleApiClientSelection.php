@@ -23,7 +23,7 @@ class GoogleApiClientSelection extends DefaultSelection {
   protected function buildEntityQuery($match = NULL, $match_operator = 'CONTAINS') {
     $query = parent::buildEntityQuery($match, $match_operator);
     $configuration = $this->getConfiguration();
-    if (is_array($configuration['property']) && !empty($configuration['property'])) {
+    if (!empty($configuration['property']) && is_array($configuration['property'])) {
       $fields = array_keys($configuration['property']);
       foreach ($fields as $field) {
         if (is_array($configuration['property'][$field])) {

@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for DataCatalog (v1beta1).
+ * Service definition for DataCatalog (v1).
  *
  * <p>
  * A fully managed and highly scalable data discovery and metadata management
@@ -35,7 +35,7 @@ use Google\Client;
  */
 class DataCatalog extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
@@ -64,7 +64,7 @@ class DataCatalog extends \Google\Service
     $this->rootUrl = $rootUrl ?: 'https://datacatalog.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1beta1';
+    $this->version = 'v1';
     $this->serviceName = 'datacatalog';
 
     $this->catalog = new DataCatalog\Resource\Catalog(
@@ -74,7 +74,7 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'search' => [
-              'path' => 'v1beta1/catalog:search',
+              'path' => 'v1/catalog:search',
               'httpMethod' => 'POST',
               'parameters' => [],
             ],
@@ -88,9 +88,13 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'lookup' => [
-              'path' => 'v1beta1/entries:lookup',
+              'path' => 'v1/entries:lookup',
               'httpMethod' => 'GET',
               'parameters' => [
+                'fullyQualifiedName' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'linkedResource' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -111,7 +115,7 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/entryGroups',
+              'path' => 'v1/{+parent}/entryGroups',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -125,7 +129,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -139,7 +143,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -153,7 +157,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -163,7 +167,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/entryGroups',
+              'path' => 'v1/{+parent}/entryGroups',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -181,7 +185,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -195,7 +199,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -205,7 +209,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -225,7 +229,7 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/entries',
+              'path' => 'v1/{+parent}/entries',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -239,7 +243,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -249,7 +253,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -259,7 +263,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -269,7 +273,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/entries',
+              'path' => 'v1/{+parent}/entries',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -290,8 +294,28 @@ class DataCatalog extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'modifyEntryContacts' => [
+              'path' => 'v1/{+name}:modifyEntryContacts',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'modifyEntryOverview' => [
+              'path' => 'v1/{+name}:modifyEntryOverview',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -304,11 +328,31 @@ class DataCatalog extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'star' => [
+              'path' => 'v1/{+name}:star',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'unstar' => [
+              'path' => 'v1/{+name}:unstar',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -325,7 +369,7 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/tags',
+              'path' => 'v1/{+parent}/tags',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -335,7 +379,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -345,7 +389,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/tags',
+              'path' => 'v1/{+parent}/tags',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -363,7 +407,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -387,7 +431,7 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/tags',
+              'path' => 'v1/{+parent}/tags',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -397,7 +441,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -407,7 +451,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/tags',
+              'path' => 'v1/{+parent}/tags',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -425,7 +469,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -449,7 +493,7 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/tagTemplates',
+              'path' => 'v1/{+parent}/tagTemplates',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -463,7 +507,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -477,7 +521,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -487,7 +531,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -497,7 +541,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -511,7 +555,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -521,7 +565,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -541,7 +585,7 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/fields',
+              'path' => 'v1/{+parent}/fields',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -555,7 +599,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -569,7 +613,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -583,7 +627,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'rename' => [
-              'path' => 'v1beta1/{+name}:rename',
+              'path' => 'v1/{+name}:rename',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -603,7 +647,7 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'rename' => [
-              'path' => 'v1beta1/{+name}:rename',
+              'path' => 'v1/{+name}:rename',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -623,7 +667,7 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/taxonomies',
+              'path' => 'v1/{+parent}/taxonomies',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -633,7 +677,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -643,7 +687,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'export' => [
-              'path' => 'v1beta1/{+parent}/taxonomies:export',
+              'path' => 'v1/{+parent}/taxonomies:export',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -662,7 +706,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -672,7 +716,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -682,7 +726,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'import' => [
-              'path' => 'v1beta1/{+parent}/taxonomies:import',
+              'path' => 'v1/{+parent}/taxonomies:import',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -692,7 +736,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/taxonomies',
+              'path' => 'v1/{+parent}/taxonomies',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -710,7 +754,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -723,8 +767,18 @@ class DataCatalog extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'replace' => [
+              'path' => 'v1/{+name}:replace',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -734,7 +788,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -754,7 +808,7 @@ class DataCatalog extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/policyTags',
+              'path' => 'v1/{+parent}/policyTags',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -764,7 +818,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -774,7 +828,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -784,7 +838,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -794,7 +848,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/policyTags',
+              'path' => 'v1/{+parent}/policyTags',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -812,7 +866,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -826,7 +880,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -836,7 +890,7 @@ class DataCatalog extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [

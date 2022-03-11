@@ -27,10 +27,26 @@ class TransferSpec extends \Google\Model
   protected $gcsDataSinkDataType = '';
   protected $gcsDataSourceType = GcsData::class;
   protected $gcsDataSourceDataType = '';
+  protected $gcsIntermediateDataLocationType = GcsData::class;
+  protected $gcsIntermediateDataLocationDataType = '';
   protected $httpDataSourceType = HttpData::class;
   protected $httpDataSourceDataType = '';
   protected $objectConditionsType = ObjectConditions::class;
   protected $objectConditionsDataType = '';
+  protected $posixDataSinkType = PosixFilesystem::class;
+  protected $posixDataSinkDataType = '';
+  protected $posixDataSourceType = PosixFilesystem::class;
+  protected $posixDataSourceDataType = '';
+  /**
+   * @var string
+   */
+  public $sinkAgentPoolName;
+  /**
+   * @var string
+   */
+  public $sourceAgentPoolName;
+  protected $transferManifestType = TransferManifest::class;
+  protected $transferManifestDataType = '';
   protected $transferOptionsType = TransferOptions::class;
   protected $transferOptionsDataType = '';
 
@@ -91,6 +107,20 @@ class TransferSpec extends \Google\Model
     return $this->gcsDataSource;
   }
   /**
+   * @param GcsData
+   */
+  public function setGcsIntermediateDataLocation(GcsData $gcsIntermediateDataLocation)
+  {
+    $this->gcsIntermediateDataLocation = $gcsIntermediateDataLocation;
+  }
+  /**
+   * @return GcsData
+   */
+  public function getGcsIntermediateDataLocation()
+  {
+    return $this->gcsIntermediateDataLocation;
+  }
+  /**
    * @param HttpData
    */
   public function setHttpDataSource(HttpData $httpDataSource)
@@ -117,6 +147,76 @@ class TransferSpec extends \Google\Model
   public function getObjectConditions()
   {
     return $this->objectConditions;
+  }
+  /**
+   * @param PosixFilesystem
+   */
+  public function setPosixDataSink(PosixFilesystem $posixDataSink)
+  {
+    $this->posixDataSink = $posixDataSink;
+  }
+  /**
+   * @return PosixFilesystem
+   */
+  public function getPosixDataSink()
+  {
+    return $this->posixDataSink;
+  }
+  /**
+   * @param PosixFilesystem
+   */
+  public function setPosixDataSource(PosixFilesystem $posixDataSource)
+  {
+    $this->posixDataSource = $posixDataSource;
+  }
+  /**
+   * @return PosixFilesystem
+   */
+  public function getPosixDataSource()
+  {
+    return $this->posixDataSource;
+  }
+  /**
+   * @param string
+   */
+  public function setSinkAgentPoolName($sinkAgentPoolName)
+  {
+    $this->sinkAgentPoolName = $sinkAgentPoolName;
+  }
+  /**
+   * @return string
+   */
+  public function getSinkAgentPoolName()
+  {
+    return $this->sinkAgentPoolName;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceAgentPoolName($sourceAgentPoolName)
+  {
+    $this->sourceAgentPoolName = $sourceAgentPoolName;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceAgentPoolName()
+  {
+    return $this->sourceAgentPoolName;
+  }
+  /**
+   * @param TransferManifest
+   */
+  public function setTransferManifest(TransferManifest $transferManifest)
+  {
+    $this->transferManifest = $transferManifest;
+  }
+  /**
+   * @return TransferManifest
+   */
+  public function getTransferManifest()
+  {
+    return $this->transferManifest;
   }
   /**
    * @param TransferOptions

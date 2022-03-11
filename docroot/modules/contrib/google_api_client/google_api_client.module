@@ -130,13 +130,13 @@ function _google_api_client_read_scope_info() {
   $classes = [];
   $client = new Google_Client();
   foreach (get_declared_classes() as $class) {
-    if (is_subclass_of($class, 'Google_Service')) {
+    if (is_subclass_of($class, 'Google_Service') && !stristr($class, 'google_service_')) {
       $temp = new ReflectionClass($class);
       $instance = $temp->newInstance($client);
       $aname = $instance->serviceName;
       if (!isset($api_names[$aname])) {
         $aname = $temp->getName();
-        $aname = strtolower(str_replace('Google_Service_', '', $aname));
+        $aname = strtolower(str_ireplace('Google\Service\\', '', $aname));
       }
       $scopes[$aname] = $temp->getConstants();
       $classes[$aname] = $class;

@@ -5,7 +5,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "google/apiclient-services": "^0.200.0",
-        "google/apiclient": "^2.0"
+        "google/apiclient-services": "~0.200",
+        "google/apiclient": "~2"
     }
 }

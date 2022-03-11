@@ -17,6 +17,7 @@
 
 namespace Google\Service\Dns\Resource;
 
+use Google\Service\Dns\ResourceRecordSet;
 use Google\Service\Dns\ResourceRecordSetsListResponse;
 
 /**
@@ -30,10 +31,80 @@ use Google\Service\Dns\ResourceRecordSetsListResponse;
 class ResourceRecordSets extends \Google\Service\Resource
 {
   /**
+   * Creates a new ResourceRecordSet. (resourceRecordSets.create)
+   *
+   * @param string $project Identifies the project addressed by this request.
+   * @param string $location Specifies the location of the resource. This
+   * information will be used for routing and will be part of the resource name.
+   * @param string $managedZone Identifies the managed zone addressed by this
+   * request. Can be the managed zone name or ID.
+   * @param ResourceRecordSet $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string clientOperationId For mutating operation requests only. An
+   * optional identifier specified by the client. Must be unique for operation
+   * resources in the Operations collection.
+   * @return ResourceRecordSet
+   */
+  public function create($project, $location, $managedZone, ResourceRecordSet $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'location' => $location, 'managedZone' => $managedZone, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], ResourceRecordSet::class);
+  }
+  /**
+   * Deletes a previously created ResourceRecordSet. (resourceRecordSets.delete)
+   *
+   * @param string $project Identifies the project addressed by this request.
+   * @param string $location Specifies the location of the resource. This
+   * information will be used for routing and will be part of the resource name.
+   * @param string $managedZone Identifies the managed zone addressed by this
+   * request. Can be the managed zone name or ID.
+   * @param string $name Fully qualified domain name.
+   * @param string $type RRSet type.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string clientOperationId For mutating operation requests only. An
+   * optional identifier specified by the client. Must be unique for operation
+   * resources in the Operations collection.
+   */
+  public function delete($project, $location, $managedZone, $name, $type, $optParams = [])
+  {
+    $params = ['project' => $project, 'location' => $location, 'managedZone' => $managedZone, 'name' => $name, 'type' => $type];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params]);
+  }
+  /**
+   * Fetches the representation of an existing ResourceRecordSet.
+   * (resourceRecordSets.get)
+   *
+   * @param string $project Identifies the project addressed by this request.
+   * @param string $location Specifies the location of the resource. This
+   * information will be used for routing and will be part of the resource name.
+   * @param string $managedZone Identifies the managed zone addressed by this
+   * request. Can be the managed zone name or ID.
+   * @param string $name Fully qualified domain name.
+   * @param string $type RRSet type.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string clientOperationId For mutating operation requests only. An
+   * optional identifier specified by the client. Must be unique for operation
+   * resources in the Operations collection.
+   * @return ResourceRecordSet
+   */
+  public function get($project, $location, $managedZone, $name, $type, $optParams = [])
+  {
+    $params = ['project' => $project, 'location' => $location, 'managedZone' => $managedZone, 'name' => $name, 'type' => $type];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], ResourceRecordSet::class);
+  }
+  /**
    * Enumerates ResourceRecordSets that you have created but not yet deleted.
    * (resourceRecordSets.listResourceRecordSets)
    *
    * @param string $project Identifies the project addressed by this request.
+   * @param string $location Specifies the location of the resource. This
+   * information will be used for routing and will be part of the resource name.
    * @param string $managedZone Identifies the managed zone addressed by this
    * request. Can be the managed zone name or ID.
    * @param array $optParams Optional parameters.
@@ -49,11 +120,36 @@ class ResourceRecordSets extends \Google\Service\Resource
    * type. If present, the "name" parameter must also be present.
    * @return ResourceRecordSetsListResponse
    */
-  public function listResourceRecordSets($project, $managedZone, $optParams = [])
+  public function listResourceRecordSets($project, $location, $managedZone, $optParams = [])
   {
-    $params = ['project' => $project, 'managedZone' => $managedZone];
+    $params = ['project' => $project, 'location' => $location, 'managedZone' => $managedZone];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ResourceRecordSetsListResponse::class);
+  }
+  /**
+   * Applies a partial update to an existing ResourceRecordSet.
+   * (resourceRecordSets.patch)
+   *
+   * @param string $project Identifies the project addressed by this request.
+   * @param string $location Specifies the location of the resource. This
+   * information will be used for routing and will be part of the resource name.
+   * @param string $managedZone Identifies the managed zone addressed by this
+   * request. Can be the managed zone name or ID.
+   * @param string $name Fully qualified domain name.
+   * @param string $type RRSet type.
+   * @param ResourceRecordSet $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string clientOperationId For mutating operation requests only. An
+   * optional identifier specified by the client. Must be unique for operation
+   * resources in the Operations collection.
+   * @return ResourceRecordSet
+   */
+  public function patch($project, $location, $managedZone, $name, $type, ResourceRecordSet $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'location' => $location, 'managedZone' => $managedZone, 'name' => $name, 'type' => $type, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], ResourceRecordSet::class);
   }
 }
 

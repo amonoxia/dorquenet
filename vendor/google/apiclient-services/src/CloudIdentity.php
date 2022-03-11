@@ -34,16 +34,22 @@ use Google\Client;
  */
 class CloudIdentity extends \Google\Service
 {
+  /** Private Service: https://www.googleapis.com/auth/cloud-identity.devices. */
+  const CLOUD_IDENTITY_DEVICES =
+      "https://www.googleapis.com/auth/cloud-identity.devices";
   /** See your device details. */
   const CLOUD_IDENTITY_DEVICES_LOOKUP =
       "https://www.googleapis.com/auth/cloud-identity.devices.lookup";
+  /** Private Service: https://www.googleapis.com/auth/cloud-identity.devices.readonly. */
+  const CLOUD_IDENTITY_DEVICES_READONLY =
+      "https://www.googleapis.com/auth/cloud-identity.devices.readonly";
   /** See, change, create, and delete any of the Cloud Identity Groups that you can access, including the members of each group. */
   const CLOUD_IDENTITY_GROUPS =
       "https://www.googleapis.com/auth/cloud-identity.groups";
   /** See any Cloud Identity Groups that you can access, including group members and their emails. */
   const CLOUD_IDENTITY_GROUPS_READONLY =
       "https://www.googleapis.com/auth/cloud-identity.groups.readonly";
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
@@ -406,6 +412,20 @@ class CloudIdentity extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getSecuritySettings' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'readMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/groups',
               'httpMethod' => 'GET',
@@ -471,6 +491,20 @@ class CloudIdentity extends \Google\Service
                   'type' => 'string',
                 ],
                 'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'updateSecuritySettings' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

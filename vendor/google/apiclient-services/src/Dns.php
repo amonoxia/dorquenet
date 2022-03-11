@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for Dns (v1).
+ * Service definition for Dns (v2).
  *
  * <p>
 </p>
@@ -34,10 +34,10 @@ use Google\Client;
  */
 class Dns extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** View your data across Google Cloud Platform services. */
+  /** View your data across Google Cloud services and see the email address of your Google Account. */
   const CLOUD_PLATFORM_READ_ONLY =
       "https://www.googleapis.com/auth/cloud-platform.read-only";
   /** View your DNS records hosted by Google Cloud DNS. */
@@ -53,8 +53,9 @@ class Dns extends \Google\Service
   public $managedZones;
   public $policies;
   public $projects;
-  public $projects_managedZones_rrsets;
   public $resourceRecordSets;
+  public $responsePolicies;
+  public $responsePolicyRules;
 
   /**
    * Constructs the internal representation of the Dns service.
@@ -69,7 +70,7 @@ class Dns extends \Google\Service
     $this->rootUrl = $rootUrl ?: 'https://dns.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1';
+    $this->version = 'v2';
     $this->serviceName = 'dns';
 
     $this->changes = new Dns\Resource\Changes(
@@ -79,10 +80,15 @@ class Dns extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/changes',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/changes',
               'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -98,10 +104,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/changes/{changeId}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/changes/{changeId}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -122,10 +133,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/changes',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/changes',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -163,10 +179,15 @@ class Dns extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -191,10 +212,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/dnsKeys',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -228,10 +254,15 @@ class Dns extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/operations/{operation}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/operations/{operation}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -252,10 +283,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/operations',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -289,10 +325,15 @@ class Dns extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'dns/v1/projects/{project}/managedZones',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones',
               'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -303,10 +344,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -322,10 +368,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -341,10 +392,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'dns/v1/projects/{project}/managedZones',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -363,10 +419,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -382,10 +443,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'update' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}',
               'httpMethod' => 'PUT',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -411,10 +477,15 @@ class Dns extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'dns/v1/projects/{project}/policies',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/policies',
               'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -425,10 +496,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'dns/v1/projects/{project}/policies/{policy}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/policies/{policy}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -444,10 +520,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'dns/v1/projects/{project}/policies/{policy}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/policies/{policy}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -463,10 +544,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'dns/v1/projects/{project}/policies',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/policies',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -481,10 +567,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'dns/v1/projects/{project}/policies/{policy}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/policies/{policy}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -500,10 +591,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'update' => [
-              'path' => 'dns/v1/projects/{project}/policies/{policy}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/policies/{policy}',
               'httpMethod' => 'PUT',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -529,10 +625,15 @@ class Dns extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'dns/v1/projects/{project}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -546,17 +647,22 @@ class Dns extends \Google\Service
           ]
         ]
     );
-    $this->projects_managedZones_rrsets = new Dns\Resource\ProjectsManagedZonesRrsets(
+    $this->resourceRecordSets = new Dns\Resource\ResourceRecordSets(
         $this,
         $this->serviceName,
-        'rrsets',
+        'resourceRecordSets',
         [
           'methods' => [
             'create' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/rrsets',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets',
               'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -572,10 +678,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets/{name}/{type}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -601,10 +712,15 @@ class Dns extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets/{name}/{type}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -629,11 +745,52 @@ class Dns extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'list' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'managedZone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'name' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'type' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'patch' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}',
+              'path' => 'dns/v2/projects/{project}/locations/{location}/managedZones/{managedZone}/rrsets/{name}/{type}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -662,14 +819,57 @@ class Dns extends \Google\Service
           ]
         ]
     );
-    $this->resourceRecordSets = new Dns\Resource\ResourceRecordSets(
+    $this->responsePolicies = new Dns\Resource\ResponsePolicies(
         $this,
         $this->serviceName,
-        'resourceRecordSets',
+        'responsePolicies',
         [
           'methods' => [
-            'list' => [
-              'path' => 'dns/v1/projects/{project}/managedZones/{managedZone}/rrsets',
+            'create' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clientOperationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies/{responsePolicy}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clientOperationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies/{responsePolicy}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
@@ -677,7 +877,31 @@ class Dns extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'managedZone' => [
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clientOperationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -686,15 +910,233 @@ class Dns extends \Google\Service
                   'location' => 'query',
                   'type' => 'integer',
                 ],
-                'name' => [
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies/{responsePolicy}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clientOperationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'update' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies/{responsePolicy}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clientOperationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->responsePolicyRules = new Dns\Resource\ResponsePolicyRules(
+        $this,
+        $this->serviceName,
+        'responsePolicyRules',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies/{responsePolicy}/rules',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clientOperationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies/{responsePolicy}/rules/{responsePolicyRule}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicyRule' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clientOperationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies/{responsePolicy}/rules/{responsePolicyRule}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicyRule' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clientOperationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies/{responsePolicy}/rules',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
                 ],
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'type' => [
+              ],
+            ],'patch' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies/{responsePolicy}/rules/{responsePolicyRule}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicyRule' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clientOperationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'update' => [
+              'path' => 'dns/v2/projects/{project}/locations/{location}/responsePolicies/{responsePolicy}/rules/{responsePolicyRule}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'responsePolicyRule' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clientOperationId' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

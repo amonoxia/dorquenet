@@ -79,8 +79,10 @@ function google_api_client_update_8001() {
  */
 function google_api_client_update_8002() {
   \Drupal::entityTypeManager()->clearCachedDefinitions();
-  $entity_type = \Drupal::entityTypeManager()->getDefinition('google_api_service_client');
-  \Drupal::entityDefinitionUpdateManager()->installEntityType($entity_type);
+  if (\Drupal::entityDefinitionUpdateManager()->needsUpdates()) {
+    $entity_type = \Drupal::entityTypeManager()->getDefinition('google_api_service_client');
+    \Drupal::entityDefinitionUpdateManager()->installEntityType($entity_type);
+  }
 }
 
 /**
@@ -88,14 +90,16 @@ function google_api_client_update_8002() {
  */
 function google_api_client_update_8803() {
   \Drupal::entityTypeManager()->clearCachedDefinitions();
-  $definition_manager = \Drupal::entityDefinitionUpdateManager();
+  if (\Drupal::entityDefinitionUpdateManager()->needsUpdates()) {
+    $definition_manager = \Drupal::entityDefinitionUpdateManager();
 
-  // Create a new field definition.
-  $new_uuid_field = \Drupal\Core\Field\BaseFieldDefinition::create('uuid')
-    ->setLabel(t('UUID'))
-    ->setDescription(t('The Google Api Client UUID.'))
-    ->setReadOnly(TRUE);
+    // Create a new field definition.
+    $new_uuid_field = \Drupal\Core\Field\BaseFieldDefinition::create('uuid')
+      ->setLabel(t('UUID'))
+      ->setDescription(t('The Google Api Client UUID.'))
+      ->setReadOnly(TRUE);
 
-// Install the new definition.
-  $definition_manager->installFieldStorageDefinition('uuid', 'google_api_client', 'google_api_client', $new_uuid_field);
+    // Install the new definition.
+    $definition_manager->installFieldStorageDefinition('uuid', 'google_api_client', 'google_api_client', $new_uuid_field);
+  }
 }

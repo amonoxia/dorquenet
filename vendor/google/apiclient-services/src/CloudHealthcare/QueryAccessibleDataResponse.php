@@ -17,8 +17,28 @@
 
 namespace Google\Service\CloudHealthcare;
 
-class QueryAccessibleDataResponse extends \Google\Model
+class QueryAccessibleDataResponse extends \Google\Collection
 {
+  protected $collection_key = 'gcsUris';
+  /**
+   * @var string[]
+   */
+  public $gcsUris;
+
+  /**
+   * @param string[]
+   */
+  public function setGcsUris($gcsUris)
+  {
+    $this->gcsUris = $gcsUris;
+  }
+  /**
+   * @return string[]
+   */
+  public function getGcsUris()
+  {
+    return $this->gcsUris;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

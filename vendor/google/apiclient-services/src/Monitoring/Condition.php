@@ -21,11 +21,19 @@ class Condition extends \Google\Model
 {
   protected $conditionAbsentType = MetricAbsence::class;
   protected $conditionAbsentDataType = '';
+  protected $conditionMatchedLogType = LogMatch::class;
+  protected $conditionMatchedLogDataType = '';
   protected $conditionMonitoringQueryLanguageType = MonitoringQueryLanguageCondition::class;
   protected $conditionMonitoringQueryLanguageDataType = '';
   protected $conditionThresholdType = MetricThreshold::class;
   protected $conditionThresholdDataType = '';
+  /**
+   * @var string
+   */
   public $displayName;
+  /**
+   * @var string
+   */
   public $name;
 
   /**
@@ -41,6 +49,20 @@ class Condition extends \Google\Model
   public function getConditionAbsent()
   {
     return $this->conditionAbsent;
+  }
+  /**
+   * @param LogMatch
+   */
+  public function setConditionMatchedLog(LogMatch $conditionMatchedLog)
+  {
+    $this->conditionMatchedLog = $conditionMatchedLog;
+  }
+  /**
+   * @return LogMatch
+   */
+  public function getConditionMatchedLog()
+  {
+    return $this->conditionMatchedLog;
   }
   /**
    * @param MonitoringQueryLanguageCondition
@@ -70,18 +92,30 @@ class Condition extends \Google\Model
   {
     return $this->conditionThreshold;
   }
+  /**
+   * @param string
+   */
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;
   }
+  /**
+   * @return string
+   */
   public function getDisplayName()
   {
     return $this->displayName;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;

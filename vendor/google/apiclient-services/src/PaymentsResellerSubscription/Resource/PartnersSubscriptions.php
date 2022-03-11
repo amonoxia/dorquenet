@@ -38,9 +38,9 @@ use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubsc
 class PartnersSubscriptions extends \Google\Service\Resource
 {
   /**
-   * Used by partners to cancel a subscription service by the end of the current
-   * billing cycle for their customers. It should be called directly by the
-   * partner using service accounts. (subscriptions.cancel)
+   * Used by partners to cancel a subscription service either immediately or by
+   * the end of the current billing cycle for their customers. It should be called
+   * directly by the partner using service accounts. (subscriptions.cancel)
    *
    * @param string $name Required. The name of the subscription resource to be
    * cancelled. It will have the format of
@@ -99,8 +99,9 @@ class PartnersSubscriptions extends \Google\Service\Resource
     return $this->call('entitle', [$params], GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse::class);
   }
   /**
-   * Used by partners to extend a subscription service for their customers. It
-   * should be called directly by the partner using service accounts.
+   * Used by partners to extend a subscription service for their customers on an
+   * ongoing basis for the subscription to remain active and renewable. It should
+   * be called directly by the partner using service accounts.
    * (subscriptions.extend)
    *
    * @param string $name Required. The name of the subscription resource to be

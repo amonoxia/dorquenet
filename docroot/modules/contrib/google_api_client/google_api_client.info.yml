@@ -7,7 +7,7 @@ dependencies:
 core_version_requirement: ^8 || ^9
 configure: google_api_client.settings
 
-# Information added by Drupal.org packaging script on 2021-06-22
-version: '8.x-4.0'
+# Information added by Drupal.org packaging script on 2022-02-20
+version: '8.x-4.2'
 project: 'google_api_client'
-datestamp: 1624371395
+datestamp: 1645360427

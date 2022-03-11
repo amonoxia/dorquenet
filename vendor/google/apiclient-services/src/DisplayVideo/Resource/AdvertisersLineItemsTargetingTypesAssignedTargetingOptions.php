@@ -33,7 +33,11 @@ class AdvertisersLineItemsTargetingTypesAssignedTargetingOptions extends \Google
 {
   /**
    * Assigns a targeting option to a line item. Returns the assigned targeting
-   * option if successful. (assignedTargetingOptions.create)
+   * option if successful. Requests to this endpoint cannot be made concurrently
+   * with the following requests updating the same line item: *
+   * BulkEditLineItemAssignedTargetingOptions * UpdateLineItem *
+   * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+   * (assignedTargetingOptions.create)
    *
    * @param string $advertiserId Required. The ID of the advertiser the line item
    * belongs to.
@@ -52,7 +56,10 @@ class AdvertisersLineItemsTargetingTypesAssignedTargetingOptions extends \Google
     return $this->call('create', [$params], AssignedTargetingOption::class);
   }
   /**
-   * Deletes an assigned targeting option from a line item.
+   * Deletes an assigned targeting option from a line item. Requests to this
+   * endpoint cannot be made concurrently with the following requests updating the
+   * same line item: * BulkEditLineItemAssignedTargetingOptions * UpdateLineItem *
+   * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
    * (assignedTargetingOptions.delete)
    *
    * @param string $advertiserId Required. The ID of the advertiser the line item
@@ -121,7 +128,7 @@ class AdvertisersLineItemsTargetingTypesAssignedTargetingOptions extends \Google
    * are: * `assignedTargetingOptionId` (default) The default sorting order is
    * ascending. To specify descending order for a field, a suffix "desc" should be
    * added to the field name. Example: `assignedTargetingOptionId desc`.
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `5000`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.
    * @opt_param string pageToken A token identifying a page of results the server

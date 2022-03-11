@@ -135,12 +135,16 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * field.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int options.requestedPolicyVersion Optional. The policy format
-   * version to be returned. Valid values are 0, 1, and 3. Requests specifying an
-   * invalid value will be rejected. Requests for policies with any conditional
-   * bindings must specify version 3. Policies without any conditional bindings
-   * may specify any valid value or leave the field unset. To learn which
-   * resources support conditions in their IAM policies, see the [IAM
+   * @opt_param int options.requestedPolicyVersion Optional. The maximum policy
+   * version that will be used to format the policy. Valid values are 0, 1, and 3.
+   * Requests specifying an invalid value will be rejected. Requests for policies
+   * with any conditional role bindings must specify version 3. Policies with no
+   * conditional role bindings may specify any valid value or leave the field
+   * unset. The policy in the response might use the policy version that you
+   * specified, or it might use a lower policy version. For example, if you
+   * specify version 3, but the policy has no conditional role bindings, the
+   * response uses version 1. To learn which resources support conditions in their
+   * IAM policies, see the [IAM
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
@@ -200,20 +204,23 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * Queries all data_ids that are consented for a specified use in the given
    * consent store and writes them to a specified destination. The returned
    * Operation includes a progress counter for the number of User data mappings
-   * processed. Errors are logged to Cloud Logging (see [Viewing error logs in
-   * Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
-   * For example, the following sample log entry shows a `failed to evaluate
-   * consent policy` error that occurred during a QueryAccessibleData call to
-   * consent store `projects/{project_id}/locations/{location_id}/datasets/{datase
-   * t_id}/consentStores/{consent_store_id}`. ```json jsonPayload: { @type: "type.
-   * googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry"
-   * error: { code: 9 message: "failed to evaluate consent policy" } resourceName:
-   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentS
-   * tores/{consent_store_id}/consents/{consent_id}" } logName: "projects/{project
-   * _id}/logs/healthcare.googleapis.com%2Fquery_accessible_data" operation: { id:
-   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/operatio
-   * ns/{operation_id}" producer: "healthcare.googleapis.com/QueryAccessibleData"
-   * } receiveTimestamp: "TIMESTAMP" resource: { labels: { consent_store_id:
+   * processed. If the request is successful, a detailed response is returned of
+   * type QueryAccessibleDataResponse, contained in the response field when the
+   * operation finishes. The metadata field type is OperationMetadata. Errors are
+   * logged to Cloud Logging (see [Viewing error logs in Cloud
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). For
+   * example, the following sample log entry shows a `failed to evaluate consent
+   * policy` error that occurred during a QueryAccessibleData call to consent
+   * store `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/co
+   * nsentStores/{consent_store_id}`. ```json jsonPayload: { @type: "type.googleap
+   * is.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: {
+   * code: 9 message: "failed to evaluate consent policy" } resourceName: "project
+   * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{c
+   * onsent_store_id}/consents/{consent_id}" } logName: "projects/{project_id}/log
+   * s/healthcare.googleapis.com%2Fquery_accessible_data" operation: { id: "projec
+   * ts/{project_id}/locations/{location_id}/datasets/{dataset_id}/operations/{ope
+   * ration_id}" producer: "healthcare.googleapis.com/QueryAccessibleData" }
+   * receiveTimestamp: "TIMESTAMP" resource: { labels: { consent_store_id:
    * "{consent_store_id}" dataset_id: "{dataset_id}" location: "{location_id}"
    * project_id: "{project_id}" } type: "healthcare_consent_store" } severity:
    * "ERROR" timestamp: "TIMESTAMP" ``` (consentStores.queryAccessibleData)

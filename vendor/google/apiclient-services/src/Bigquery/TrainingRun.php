@@ -20,18 +20,37 @@ namespace Google\Service\Bigquery;
 class TrainingRun extends \Google\Collection
 {
   protected $collection_key = 'results';
+  protected $classLevelGlobalExplanationsType = GlobalExplanation::class;
+  protected $classLevelGlobalExplanationsDataType = 'array';
   protected $dataSplitResultType = DataSplitResult::class;
   protected $dataSplitResultDataType = '';
   protected $evaluationMetricsType = EvaluationMetrics::class;
   protected $evaluationMetricsDataType = '';
-  protected $globalExplanationsType = GlobalExplanation::class;
-  protected $globalExplanationsDataType = 'array';
+  protected $modelLevelGlobalExplanationType = GlobalExplanation::class;
+  protected $modelLevelGlobalExplanationDataType = '';
   protected $resultsType = IterationResult::class;
   protected $resultsDataType = 'array';
+  /**
+   * @var string
+   */
   public $startTime;
   protected $trainingOptionsType = TrainingOptions::class;
   protected $trainingOptionsDataType = '';
 
+  /**
+   * @param GlobalExplanation[]
+   */
+  public function setClassLevelGlobalExplanations($classLevelGlobalExplanations)
+  {
+    $this->classLevelGlobalExplanations = $classLevelGlobalExplanations;
+  }
+  /**
+   * @return GlobalExplanation[]
+   */
+  public function getClassLevelGlobalExplanations()
+  {
+    return $this->classLevelGlobalExplanations;
+  }
   /**
    * @param DataSplitResult
    */
@@ -61,18 +80,18 @@ class TrainingRun extends \Google\Collection
     return $this->evaluationMetrics;
   }
   /**
-   * @param GlobalExplanation[]
+   * @param GlobalExplanation
    */
-  public function setGlobalExplanations($globalExplanations)
+  public function setModelLevelGlobalExplanation(GlobalExplanation $modelLevelGlobalExplanation)
   {
-    $this->globalExplanations = $globalExplanations;
+    $this->modelLevelGlobalExplanation = $modelLevelGlobalExplanation;
   }
   /**
-   * @return GlobalExplanation[]
+   * @return GlobalExplanation
    */
-  public function getGlobalExplanations()
+  public function getModelLevelGlobalExplanation()
   {
-    return $this->globalExplanations;
+    return $this->modelLevelGlobalExplanation;
   }
   /**
    * @param IterationResult[]
@@ -88,10 +107,16 @@ class TrainingRun extends \Google\Collection
   {
     return $this->results;
   }
+  /**
+   * @param string
+   */
   public function setStartTime($startTime)
   {
     $this->startTime = $startTime;
   }
+  /**
+   * @return string
+   */
   public function getStartTime()
   {
     return $this->startTime;

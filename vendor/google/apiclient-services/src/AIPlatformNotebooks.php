@@ -23,19 +23,18 @@ use Google\Client;
  * Service definition for AIPlatformNotebooks (v1).
  *
  * <p>
- * AI Platform Notebooks API is used to manage notebook resources in Google
- * Cloud.</p>
+ * Notebooks API is used to manage notebook resources in Google Cloud.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/ai-platform/notebooks/docs/" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/notebooks/docs/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
 class AIPlatformNotebooks extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
@@ -310,6 +309,10 @@ class AIPlatformNotebooks extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'type' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/instances',
@@ -441,6 +444,16 @@ class AIPlatformNotebooks extends \Google\Service
               ],
             ],'updateConfig' => [
               'path' => 'v1/{+name}:updateConfig',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'updateMetadataItems' => [
+              'path' => 'v1/{+name}:updateMetadataItems',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -585,6 +598,20 @@ class AIPlatformNotebooks extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getIamPolicy' => [
+              'path' => 'v1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'options.requestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/runtimes',
               'httpMethod' => 'GET',
@@ -603,11 +630,31 @@ class AIPlatformNotebooks extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'reportEvent' => [
+              'path' => 'v1/{+name}:reportEvent',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'reset' => [
               'path' => 'v1/{+name}:reset',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -638,6 +685,16 @@ class AIPlatformNotebooks extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

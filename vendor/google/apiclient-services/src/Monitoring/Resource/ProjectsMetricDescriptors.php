@@ -32,9 +32,10 @@ use Google\Service\Monitoring\MonitoringEmpty;
 class ProjectsMetricDescriptors extends \Google\Service\Resource
 {
   /**
-   * Creates a new metric descriptor. User-created metric descriptors define
-   * custom metrics (https://cloud.google.com/monitoring/custom-metrics).
-   * (metricDescriptors.create)
+   * Creates a new metric descriptor. The creation is executed asynchronously and
+   * callers may check the returned operation to track its progress. User-created
+   * metric descriptors define custom metrics (https://cloud.google.com/monitoring
+   * /custom-metrics). (metricDescriptors.create)
    *
    * @param string $name Required. The project
    * (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
@@ -68,8 +69,7 @@ class ProjectsMetricDescriptors extends \Google\Service\Resource
     return $this->call('delete', [$params], MonitoringEmpty::class);
   }
   /**
-   * Gets a single metric descriptor. This method does not require a Workspace.
-   * (metricDescriptors.get)
+   * Gets a single metric descriptor. (metricDescriptors.get)
    *
    * @param string $name Required. The metric descriptor on which to execute the
    * request. The format is:
@@ -86,8 +86,8 @@ class ProjectsMetricDescriptors extends \Google\Service\Resource
     return $this->call('get', [$params], MetricDescriptor::class);
   }
   /**
-   * Lists metric descriptors that match a filter. This method does not require a
-   * Workspace. (metricDescriptors.listProjectsMetricDescriptors)
+   * Lists metric descriptors that match a filter.
+   * (metricDescriptors.listProjectsMetricDescriptors)
    *
    * @param string $name Required. The project
    * (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute

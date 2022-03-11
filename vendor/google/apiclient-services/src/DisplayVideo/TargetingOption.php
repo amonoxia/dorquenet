@@ -23,10 +23,14 @@ class TargetingOption extends \Google\Model
   protected $ageRangeDetailsDataType = '';
   protected $appCategoryDetailsType = AppCategoryTargetingOptionDetails::class;
   protected $appCategoryDetailsDataType = '';
+  protected $audioContentTypeDetailsType = AudioContentTypeTargetingOptionDetails::class;
+  protected $audioContentTypeDetailsDataType = '';
   protected $authorizedSellerStatusDetailsType = AuthorizedSellerStatusTargetingOptionDetails::class;
   protected $authorizedSellerStatusDetailsDataType = '';
   protected $browserDetailsType = BrowserTargetingOptionDetails::class;
   protected $browserDetailsDataType = '';
+  protected $businessChainDetailsType = BusinessChainTargetingOptionDetails::class;
+  protected $businessChainDetailsDataType = '';
   protected $carrierAndIspDetailsType = CarrierAndIspTargetingOptionDetails::class;
   protected $carrierAndIspDetailsDataType = '';
   protected $categoryDetailsType = CategoryTargetingOptionDetails::class;
@@ -53,20 +57,33 @@ class TargetingOption extends \Google\Model
   protected $householdIncomeDetailsDataType = '';
   protected $languageDetailsType = LanguageTargetingOptionDetails::class;
   protected $languageDetailsDataType = '';
+  /**
+   * @var string
+   */
   public $name;
   protected $nativeContentPositionDetailsType = NativeContentPositionTargetingOptionDetails::class;
   protected $nativeContentPositionDetailsDataType = '';
+  protected $omidDetailsType = OmidTargetingOptionDetails::class;
+  protected $omidDetailsDataType = '';
   protected $onScreenPositionDetailsType = OnScreenPositionTargetingOptionDetails::class;
   protected $onScreenPositionDetailsDataType = '';
   protected $operatingSystemDetailsType = OperatingSystemTargetingOptionDetails::class;
   protected $operatingSystemDetailsDataType = '';
   protected $parentalStatusDetailsType = ParentalStatusTargetingOptionDetails::class;
   protected $parentalStatusDetailsDataType = '';
+  protected $poiDetailsType = PoiTargetingOptionDetails::class;
+  protected $poiDetailsDataType = '';
   protected $sensitiveCategoryDetailsType = SensitiveCategoryTargetingOptionDetails::class;
   protected $sensitiveCategoryDetailsDataType = '';
   protected $subExchangeDetailsType = SubExchangeTargetingOptionDetails::class;
   protected $subExchangeDetailsDataType = '';
+  /**
+   * @var string
+   */
   public $targetingOptionId;
+  /**
+   * @var string
+   */
   public $targetingType;
   protected $userRewardedContentDetailsType = UserRewardedContentTargetingOptionDetails::class;
   protected $userRewardedContentDetailsDataType = '';
@@ -104,6 +121,20 @@ class TargetingOption extends \Google\Model
     return $this->appCategoryDetails;
   }
   /**
+   * @param AudioContentTypeTargetingOptionDetails
+   */
+  public function setAudioContentTypeDetails(AudioContentTypeTargetingOptionDetails $audioContentTypeDetails)
+  {
+    $this->audioContentTypeDetails = $audioContentTypeDetails;
+  }
+  /**
+   * @return AudioContentTypeTargetingOptionDetails
+   */
+  public function getAudioContentTypeDetails()
+  {
+    return $this->audioContentTypeDetails;
+  }
+  /**
    * @param AuthorizedSellerStatusTargetingOptionDetails
    */
   public function setAuthorizedSellerStatusDetails(AuthorizedSellerStatusTargetingOptionDetails $authorizedSellerStatusDetails)
@@ -130,6 +161,20 @@ class TargetingOption extends \Google\Model
   public function getBrowserDetails()
   {
     return $this->browserDetails;
+  }
+  /**
+   * @param BusinessChainTargetingOptionDetails
+   */
+  public function setBusinessChainDetails(BusinessChainTargetingOptionDetails $businessChainDetails)
+  {
+    $this->businessChainDetails = $businessChainDetails;
+  }
+  /**
+   * @return BusinessChainTargetingOptionDetails
+   */
+  public function getBusinessChainDetails()
+  {
+    return $this->businessChainDetails;
   }
   /**
    * @param CarrierAndIspTargetingOptionDetails
@@ -313,10 +358,16 @@ class TargetingOption extends \Google\Model
   {
     return $this->languageDetails;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
@@ -334,6 +385,20 @@ class TargetingOption extends \Google\Model
   public function getNativeContentPositionDetails()
   {
     return $this->nativeContentPositionDetails;
+  }
+  /**
+   * @param OmidTargetingOptionDetails
+   */
+  public function setOmidDetails(OmidTargetingOptionDetails $omidDetails)
+  {
+    $this->omidDetails = $omidDetails;
+  }
+  /**
+   * @return OmidTargetingOptionDetails
+   */
+  public function getOmidDetails()
+  {
+    return $this->omidDetails;
   }
   /**
    * @param OnScreenPositionTargetingOptionDetails
@@ -378,6 +443,20 @@ class TargetingOption extends \Google\Model
     return $this->parentalStatusDetails;
   }
   /**
+   * @param PoiTargetingOptionDetails
+   */
+  public function setPoiDetails(PoiTargetingOptionDetails $poiDetails)
+  {
+    $this->poiDetails = $poiDetails;
+  }
+  /**
+   * @return PoiTargetingOptionDetails
+   */
+  public function getPoiDetails()
+  {
+    return $this->poiDetails;
+  }
+  /**
    * @param SensitiveCategoryTargetingOptionDetails
    */
   public function setSensitiveCategoryDetails(SensitiveCategoryTargetingOptionDetails $sensitiveCategoryDetails)
@@ -405,18 +484,30 @@ class TargetingOption extends \Google\Model
   {
     return $this->subExchangeDetails;
   }
+  /**
+   * @param string
+   */
   public function setTargetingOptionId($targetingOptionId)
   {
     $this->targetingOptionId = $targetingOptionId;
   }
+  /**
+   * @return string
+   */
   public function getTargetingOptionId()
   {
     return $this->targetingOptionId;
   }
+  /**
+   * @param string
+   */
   public function setTargetingType($targetingType)
   {
     $this->targetingType = $targetingType;
   }
+  /**
+   * @return string
+   */
   public function getTargetingType()
   {
     return $this->targetingType;
