@@ -1,0 +1,30 @@
+uuid: 039df1b5-33d2-4ae9-85c6-3c10a408dafa
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:295b2be0-4578-44f0-ac47-ca0829023862'
+  module:
+    - block_content
+    - system
+  theme:
+    - dorquenet
+id: monogram_2
+theme: dorquenet
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:295b2be0-4578-44f0-ac47-ca0829023862'
+settings:
+  id: 'block_content:295b2be0-4578-44f0-ac47-ca0829023862'
+  label: Monogram
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/gallery\r\n/gallery/*"

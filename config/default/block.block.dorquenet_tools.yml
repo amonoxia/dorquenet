@@ -5,7 +5,6 @@ dependencies:
   config:
     - system.menu.tools
   module:
-    - node
     - system
   theme:
     - dorquenet
@@ -26,11 +25,7 @@ settings:
   depth: 0
   expand_all_items: false
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-    bundles:
-      article: article
-      page: page
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/gallery\r\n/gallery/*"

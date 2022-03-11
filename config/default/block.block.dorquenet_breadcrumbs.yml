@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - node
     - system
   theme:
     - dorquenet
@@ -10,8 +11,8 @@ _core:
   default_config_hash: VNXt_FUOrgtRAcsXGFJLNkGtGVxnh_MUYBT5j4Vi7Vc
 id: dorquenet_breadcrumbs
 theme: dorquenet
-region: bottom_content
-weight: -8
+region: banner
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -19,4 +20,11 @@ settings:
   label: Breadcrumbs
   label_display: '0'
   provider: system
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      photo: photo

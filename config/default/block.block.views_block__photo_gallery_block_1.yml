@@ -1,0 +1,29 @@
+uuid: 90bf4bdb-d448-4cfb-a683-0aa5cf56f3bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.photo_gallery
+  module:
+    - system
+    - views
+  theme:
+    - dorquenet
+id: views_block__photo_gallery_block_1
+theme: dorquenet
+region: bottom_content
+weight: -8
+provider: null
+plugin: 'views_block:photo_gallery-block_1'
+settings:
+  id: 'views_block:photo_gallery-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /gallery

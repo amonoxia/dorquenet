@@ -330,3 +330,24 @@ ul.menu li {
   padding-bottom: 50px;
   margin-bottom: 25px;
 }
+
+.breadcrumb {
+    /* background-color: #fcfcfc; */
+    border: 1px solid #eaeaea;
+    /* padding: 14px 20px!important; */
+    /* margin-bottom: 30px; */
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin: 0px;
+    /* padding: 0px; */
+}
+
+#banner-inside {
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
+
+#main-content {
+    padding: 20px 0 30px 0;
+}

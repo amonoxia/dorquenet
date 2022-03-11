@@ -1,0 +1,22 @@
+uuid: dcd21491-8dee-4900-ae52-4970784a8bfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: photo_gallery_urls
+label: 'Photo Gallery URLs'
+type: 'canonical_entities:node'
+pattern: 'gallery/[node:title]'
+selection_criteria:
+  f1c1fcfc-f235-474a-b2bd-928fd7ec9163:
+    id: node_type
+    negate: false
+    uuid: f1c1fcfc-f235-474a-b2bd-928fd7ec9163
+    context_mapping:
+      node: node
+    bundles:
+      photo: photo
+selection_logic: and
+weight: -5
+relationships: {  }
