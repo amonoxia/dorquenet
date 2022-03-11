@@ -1,0 +1,7 @@
+synonyms_select.settings:
+  path: '/admin/structure/synonyms_select/settings'
+  defaults:
+    _form: '\Drupal\synonyms_select\Form\SettingsForm'
+    _title: 'Synonyms select widget settings'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,23 @@
+services:
+  plugin.manager.synonyms_provider:
+    class: Drupal\synonyms\ProviderPluginManager
+    parent: default_plugin_manager
+
+  synonyms.behavior_service:
+    class: Drupal\synonyms\SynonymsService\BehaviorService
+    tags:
+      - { name: service_collector, tag: synonyms_behavior, call: addBehaviorService }
+
+  synonyms.provider_service:
+    class: Drupal\synonyms\SynonymsService\ProviderService
+    arguments: [ '@entity_type.manager', '@entity_type.bundle.info' ]
+
+  synonyms.provider.field_type_to_synonyms:
+    class: Drupal\synonyms\SynonymsService\FieldTypeToSynonyms
+    arguments: [ '@module_handler' ]
+
+  synonyms.param_converter.entity_type:
+    class: Drupal\synonyms\ParamConverter\EntityTypeParamConverter
+    arguments: [ '@entity_type.manager' ]
+    tags:
+      - { name: paramconverter }

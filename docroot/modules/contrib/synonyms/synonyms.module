@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Provide synonyms feature for content entities.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function synonyms_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for Synonyms module.
+    case 'help.page.synonyms':
+      // Return a line-break version of the README.md file.
+      return _filter_autop(file_get_contents(dirname(__FILE__) . '/README.md'));
+
+    default:
+  }
+}

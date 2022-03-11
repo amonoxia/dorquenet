@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '200d25e9663979ca779be8ac16d37b7059d93969',
+        'reference' => 'e352f03e0fe87e5cde9daa1c32ae482dcdc99fa9',
         'name' => 'acquia/drupal-minimal-project',
         'dev' => true,
     ),
@@ -34,7 +34,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '200d25e9663979ca779be8ac16d37b7059d93969',
+            'reference' => 'e352f03e0fe87e5cde9daa1c32ae482dcdc99fa9',
             'dev_requirement' => false,
         ),
         'asm89/stack-cors' => array(
@@ -1025,6 +1025,15 @@
             'install_path' => __DIR__ . '/../../docroot/modules/contrib/structure_sync',
             'aliases' => array(),
             'reference' => '2.0.2',
+            'dev_requirement' => false,
+        ),
+        'drupal/synonyms' => array(
+            'pretty_version' => '2.1.0',
+            'version' => '2.1.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/synonyms',
+            'aliases' => array(),
+            'reference' => '2.1.0',
             'dev_requirement' => false,
         ),
         'drupal/syslog' => array(

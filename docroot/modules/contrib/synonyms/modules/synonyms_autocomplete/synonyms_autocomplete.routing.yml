@@ -1,0 +1,17 @@
+synonyms_autocomplete.settings:
+  path: '/admin/structure/synonyms_autocomplete/settings'
+  defaults:
+    _form: '\Drupal\synonyms_autocomplete\Form\SettingsForm'
+    _title: 'Synonyms autocomplete widget settings'
+  requirements:
+    _permission: 'administer site configuration'
+synonyms.entity_autocomplete:
+  path: '/synonyms_autocomplete/entity/autocomplete/{target_type}/{token}'
+  options:
+    parameters:
+      target_type:
+        type: synonyms_entity_type
+  defaults:
+    _controller: 'Drupal\synonyms_autocomplete\Controller\EntityAutocomplete::autocomplete'
+  requirements:
+    _permission: 'access synonyms entity autocomplete'

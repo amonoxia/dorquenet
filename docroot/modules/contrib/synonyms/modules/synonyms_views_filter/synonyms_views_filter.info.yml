@@ -1,0 +1,13 @@
+name: Synonyms Views Filter
+description: Provides Synonyms friendly exposed filter for core Views module.
+package: Synonyms
+type: module
+core_version_requirement: ^9 || ^10
+dependencies:
+  - synonyms:synonyms
+  - drupal:views
+
+# Information added by Drupal.org packaging script on 2022-01-03
+version: '2.1.0'
+project: 'synonyms'
+datestamp: 1641244509

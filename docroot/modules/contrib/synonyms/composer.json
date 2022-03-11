@@ -1,0 +1,35 @@
+{
+  "name": "drupal/synonyms",
+  "description": "Provides synonyms feature for all entities.",
+  "type": "drupal-module",
+  "homepage": "https://www.drupal.org/project/synonyms",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Bojan Zivanovic",
+      "homepage": "https://www.drupal.org/u/bojanz",
+      "role": "Author and D5, D6 and D7 versions developer."
+    },
+    {
+      "name": "Alex Trosenko",
+      "homepage": "https://www.drupal.org/u/bucefal91",
+      "role": "D7 and D8 versions developer."
+    },
+    {
+      "name": "Duro Arezina",
+      "homepage": "https://www.drupal.org/u/devad",
+      "role": "D8, D9 and D10 versions maintenance"
+    },
+    {
+      "name": "See other contributors",
+      "homepage": "https://www.drupal.org/node/148775/committers"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/synonyms",
+    "source": "https://git.drupalcode.org/project/synonyms"
+  },
+  "require": {
+    "drupal/core": "^9 || ^10"
+  }
+}

@@ -1,0 +1,6 @@
+synonyms_select.settings:
+  route_name: 'synonyms_select.settings'
+  title: 'Synonyms select widget settings'
+  weight: 2
+  appears_on:
+    - synonyms.overview

@@ -1,0 +1,7 @@
+synonyms.provider.*:
+  type: mapping
+  label: 'Base settings of a synonyms provider'
+  mapping:
+    wording:
+      type: string
+      label: 'Wording for this provider'

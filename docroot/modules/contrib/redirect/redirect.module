@@ -299,13 +299,39 @@ function redirect_entity_extra_field_info() {
 function redirect_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $form_state->getFormObject()->getEntity();
-  if (!$node->isNew() && \Drupal::currentUser()->hasPermission('administer redirects')) {
 
-    $nid = $node->id();
+  add_redirect_tab($node, $form);
+}
 
-    // Find redirects to this node.
-    $redirects = \Drupal::service('redirect.repository')
-      ->findByDestinationUri(["internal:/node/$nid", "entity:node/$nid"]);
+/**
+ * Implements hook_form_taxonomy_term_form_alter().
+ */
+function redirect_form_taxonomy_term_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  /** @var \Drupal\taxonomy\Entity\Term $term */
+  $term = $form_state->getFormObject()->getEntity();
+
+  add_redirect_tab($term, $form);
+}
+
+/**
+ * Adds the 'URL Redirects' tab to node edit form or taxonomy term edit form.
+ */
+function add_redirect_tab($entity, &$form) {
+  if (!$entity->isNew() && \Drupal::currentUser()->hasPermission('administer redirects')) {
+
+    if ($entity->getEntityTypeId() == 'taxonomy_term') {
+      $tid = $entity->get('tid')->value;
+
+      // Find redirects to this taxonomy term.
+      $redirects = \Drupal::service('redirect.repository')
+        ->findByDestinationUri(["internal:/taxonomy/term/$tid", "entity:taxonomy/term/$tid"]);
+    } elseif ($entity->getEntityTypeId() == 'node') {
+      $nid = $entity->id();
+
+      // Find redirects to this node.
+      $redirects = \Drupal::service('redirect.repository')
+        ->findByDestinationUri(["internal:/node/$nid", "entity:node/$nid"]);
+    }
 
     // Assemble the rows for the table.
     $rows = [];
@@ -339,6 +365,7 @@ function redirect_form_node_form_alter(&$form, FormStateInterface $form_state, $
       '#title' => t('URL redirects'),
       '#group' => 'advanced',
       '#open' => FALSE,
+      '#weight' => 10,   /* ADDED THIS */
       'table' => [
         '#type' => 'table',
         '#header' => $header,
@@ -369,7 +396,7 @@ function redirect_form_node_form_alter(&$form, FormStateInterface $form_state, $
     $form['url_redirects']['actions']['#links']['add'] = [
       'title' => t('Add URL redirect'),
       'url' => Url::fromRoute('redirect.add', [
-        'redirect' => $node->toUrl()->getInternalPath(),
+        'redirect' => $entity->toUrl()->getInternalPath(),
         'destination' => \Drupal::destination()->get(),
       ]),
       'attributes' => [

@@ -1,0 +1,13 @@
+name: Synonyms Select Widget
+description: Provides Synonyms friendly select widget.
+package: Synonyms
+type: module
+core_version_requirement: ^9 || ^10
+configure: synonyms_select.settings
+dependencies:
+  - synonyms:synonyms
+
+# Information added by Drupal.org packaging script on 2022-01-03
+version: '2.1.0'
+project: 'synonyms'
+datestamp: 1641244509

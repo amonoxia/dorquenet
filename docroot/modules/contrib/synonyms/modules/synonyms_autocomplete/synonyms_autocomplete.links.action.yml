@@ -1,0 +1,6 @@
+synonyms_autocomplete.settings:
+  route_name: 'synonyms_autocomplete.settings'
+  title: 'Synonyms autocomplete widget settings'
+  weight: 2
+  appears_on:
+    - synonyms.overview

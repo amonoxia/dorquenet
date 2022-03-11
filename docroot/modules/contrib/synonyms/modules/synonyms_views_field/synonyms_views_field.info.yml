@@ -1,0 +1,14 @@
+name: Synonyms Views Field
+description: Exposes the Synonyms list field to the core Views module.
+package: Synonyms
+type: module
+core_version_requirement: ^9 || ^10
+dependencies:
+  - synonyms:synonyms
+  - synonyms:synonyms_list_field
+  - drupal:views
+
+# Information added by Drupal.org packaging script on 2022-01-03
+version: '2.1.0'
+project: 'synonyms'
+datestamp: 1641244509

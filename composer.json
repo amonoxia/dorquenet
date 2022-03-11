@@ -13,7 +13,7 @@
         "acquia/cohesion": "^6.7",
         "acquia/cohesion-theme": "^6.7",
         "composer/installers": "^1.9",
-        "cweagans/composer-patches": "^1.6",
+        "cweagans/composer-patches": "^1.7",
         "drupal/acquia_connector": "^3.0",
         "drupal/acquia_search": "^3.0",
         "drupal/admin_toolbar": "^3.0",
@@ -27,6 +27,8 @@
         "drupal/redirect": "^1.6",
         "drupal/spambot": "^1.2",
         "drupal/structure_sync": "^2.0",
+        "drupal/synonyms": "^2.1",
+        "drupal/term_merge": "^2.0.0-beta2",
         "drupal/term_merge_manager": "^1.0@beta",
         "drush/drush": "^10.6"
     },
@@ -87,7 +89,12 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "patches": {},
+        "patches": {
+            "drupal/redirect": {
+                "Add a 'URL Redirects' tab to the taxonomy term edit form":
+                "https://www.drupal.org/files/issues/2021-03-26/redirect_provide_redirect_tab_on_taxonomy_terms_3205896.patch"
+            }
+        },
         "violinist": {
             "allow_updates_beyond_constraint": 0,
             "blocklist": [
