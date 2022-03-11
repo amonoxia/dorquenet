@@ -461,7 +461,7 @@ display:
         type: normal
         title: 🔎
         description: 'Solr 7 Search'
-        weight: -42
+        weight: -43
         enabled: true
         expanded: false
         menu_name: main

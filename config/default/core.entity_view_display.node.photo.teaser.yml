@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.photo.body
     - field.field.node.photo.field_photo
+    - field.field.node.photo.field_photo_description
     - field.field.node.photo.field_photo_notes
     - field.field.node.photo.field_tags
     - image.style.large
@@ -29,6 +30,7 @@ content:
     region: content
 hidden:
   body: true
+  field_photo_description: true
   field_photo_notes: true
   field_tags: true
   langcode: true

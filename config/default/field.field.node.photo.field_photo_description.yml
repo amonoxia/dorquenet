@@ -1,0 +1,19 @@
+uuid: ac29c258-8a2c-4399-9c55-039386f1468f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photo_description
+    - node.type.photo
+id: node.photo.field_photo_description
+field_name: field_photo_description
+entity_type: node
+bundle: photo
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

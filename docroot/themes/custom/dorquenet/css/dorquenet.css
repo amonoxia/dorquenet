@@ -132,9 +132,11 @@ img, .comment,
     border: thin #666666 solid;
 }
 
-/* No border */
-ul.tabs li a:hover {
-  border: 0px;
+/* Regular corners with no borders */
+.image-style-gallery-thumb, .image-style-gallery-photo {
+  border-radius: 0;
+  border-width: 0px;
+  padding:5px;
 }
 
 /* Background colors */
@@ -200,6 +202,23 @@ div.messages.messages--status {
   margin-right:0px;
   border-bottom-left-radius: 15px;
   border-top-right-radius: 150px;
+}
+
+/* MOUSEOVER AFFECTS */
+
+.image-style-gallery-thumb {
+  filter: grayscale(95%);
+  opacity: 90%;
+}
+
+.image-style-gallery-thumb:hover {
+  filter: grayscale(0%);
+  opacity: 100%;
+}
+
+/* No border */
+ul.tabs li a:hover {
+  border: 0px;
 }
 
 /* MIGRATE */

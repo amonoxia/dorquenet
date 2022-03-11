@@ -11,7 +11,7 @@ id: node.photo.body
 field_name: body
 entity_type: node
 bundle: photo
-label: Description
+label: Story
 description: ''
 required: false
 translatable: true

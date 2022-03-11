@@ -5,9 +5,10 @@ dependencies:
   config:
     - field.field.node.photo.body
     - field.field.node.photo.field_photo
+    - field.field.node.photo.field_photo_description
     - field.field.node.photo.field_photo_notes
     - field.field.node.photo.field_tags
-    - image.style.wide
+    - image.style.gallery_photo
     - node.type.photo
   module:
     - image
@@ -23,16 +24,24 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   field_photo:
     type: image
     label: hidden
     settings:
       image_link: file
-      image_style: wide
+      image_style: gallery_photo
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_photo_description:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_tags:
     type: entity_reference_label

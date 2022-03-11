@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:295b2be0-4578-44f0-ac47-ca0829023862'
   module:
     - block_content
+    - node
     - system
   theme:
     - dorquenet
@@ -28,3 +29,11 @@ visibility:
     id: request_path
     negate: true
     pages: "<front>\r\n/contact\r\n/user/*\r\n/user"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      page: page
