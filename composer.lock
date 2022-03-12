@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78ead93a8fd798a0c2e253f73ee11e75",
+    "content-hash": "c2ebf94c70a7e96c90846257f28fb2f2",
     "packages": [
         {
             "name": "acquia/cohesion",
@@ -9535,6 +9535,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/bootstrap_business": 10,
+        "drupal/term_merge": 10,
         "drupal/term_merge_manager": 10
     },
     "prefer-stable": true,

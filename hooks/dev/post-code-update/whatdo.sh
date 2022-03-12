@@ -10,4 +10,4 @@ target_env="$2"
 
 drush @$site.$target_env updb -y
 drush @$site.$target_env cim -y
-echo "Testing, testing. Hello world!"
+# echo "Testing, testing. Hello world!"

@@ -28,7 +28,7 @@
         "drupal/spambot": "^1.2",
         "drupal/structure_sync": "^2.0",
         "drupal/synonyms": "^2.1",
-        "drupal/term_merge": "^2.0.0-beta2",
+        "drupal/term_merge": "^2.0@beta",
         "drupal/term_merge_manager": "^1.0@beta",
         "drush/drush": "^10.6"
     },
