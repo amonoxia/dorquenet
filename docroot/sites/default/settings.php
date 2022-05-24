@@ -864,5 +864,5 @@ $settings['trusted_host_patterns'] = [
 ];
 
 $settings['trusted_host_patterns'] = array(
-  '^www\.dorque\.net$',
+  '^dorque\.net$',
 );
