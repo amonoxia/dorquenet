@@ -866,4 +866,5 @@ $settings['trusted_host_patterns'] = [
 $settings['trusted_host_patterns'] = array(
   '^dorque\.net$',
   '^www\.dorque\.net$',
+  '.+.\.acquia-sites\.com$',
 );
