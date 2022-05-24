@@ -862,3 +862,7 @@ $settings['trusted_host_patterns'] = [
   '^eechalldev\.prod\.acquia-sites\.com$',
   '^eefac636-fd9d-4d0e-a992-79481190ad98\.web\.ahdev\.cloud$',
 ];
+
+$settings['trusted_host_patterns'] = array(
+  '^www\.dorque\.net$',
+);
